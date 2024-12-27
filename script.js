@@ -1,0 +1,159 @@
+// Klik class aktif
+const menuOpsion = document.querySelector('.menu-opsion');
+const menuButton = document.querySelector('#menu-button');
+
+
+
+if (menuButton && menuOpsion) {
+    menuButton.onclick = (event) => {
+        event.preventDefault();
+        console.log();
+        menuOpsion.classList.toggle('active');
+    };
+
+    document.addEventListener('click', function (e) {
+        if (!menuOpsion.contains(e.target) && !menuButton.contains(e.target)) {
+            menuOpsion.classList.remove('active');
+        }
+    });
+}
+
+let keranjangIcon = document.querySelector("#icon-keranjang");
+let Keranjang = document.querySelector(".keranjang");
+let closeKeranjang = document.querySelector("#close-keranjang");
+
+keranjangIcon.onclick = (event) => {
+    event.preventDefault();
+    console.log();
+    Keranjang.classList.toggle('active');
+};
+
+closeKeranjang.onclick = () => {
+    Keranjang.classList.remove('active');
+};
+
+document.addEventListener('click', function (e) {
+    
+    if (!Keranjang.contains(e.target) && !keranjangIcon.contains(e.target)) {
+        Keranjang.classList.remove('active');
+    }
+});
+
+if (document.readyState == 'loading') {
+    document.addEventListener('DOMContentLoaded', ready);
+} else {
+    ready();
+}
+
+function ready() {
+    var removeCartButtons = document.getElementsByClassName('icon-remove');
+    for (var i = 0; i < removeCartButtons.length; i++) {
+        var button = removeCartButtons[i];
+        button.addEventListener('click', removeCartItem);
+    }
+
+    var quantityInputs = document.getElementsByClassName('card-quantity');
+    for (var i = 0; i < quantityInputs.length; i++) {
+        var input = quantityInputs[i];
+        input.addEventListener('change', quantityChanged);
+    }
+
+    var addCartButtons = document.getElementsByClassName('add-cart');
+    for (var i = 0; i < addCartButtons.length; i++) {
+        var button = addCartButtons[i];
+        button.addEventListener('click', addCartClicked);
+    }
+
+    document.querySelector('.btn-buy').addEventListener('click', buyButtonClicked);
+}
+
+function buyButtonClicked() {
+    alert('Your order has been placed');
+    var cartContent = document.querySelector('.keranjang-kontent');
+    while (cartContent.hasChildNodes()) {
+        cartContent.removeChild(cartContent.firstChild);
+    }
+    updatetotal();
+}
+
+function removeCartItem(event) {
+    event.stopPropagation();
+    var buttonClicked = event.target;
+    buttonClicked.closest('.keranjang-box').remove();
+    updatetotal();
+}
+
+function quantityChanged(event) {
+    var input = event.target;
+    if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1;
+    }
+    updatetotal();
+}
+
+function addCartClicked(event) {
+    event.stopPropagation(); // Menghentikan event click agar tidak memengaruhi elemen lain
+    var button = event.target;
+    var shopProducts = button.closest('.card-item');
+    var title = shopProducts.querySelector('.product-title').innerText;
+    var price = shopProducts.querySelector('.button-text').innerText;
+    var produkImg = shopProducts.querySelector('img').src;
+
+    addProductToCart(title, price, produkImg);
+    updatetotal();
+}
+
+function addProductToCart(title, price, produkImg) {
+    var keranjangKontent = document.querySelector('.keranjang-kontent');
+
+    var cartItemNames = keranjangKontent.querySelectorAll('.produck-title');
+    for (var i = 0; i < cartItemNames.length; i++) {
+        if (cartItemNames[i].innerText === title) {
+            alert("You have already added this item to the cart");
+            return;
+        }
+    }
+
+    var cartShopBox = document.createElement('div');
+    cartShopBox.classList.add('keranjang-box');
+
+    var cartBoxContent = `
+        <img src="${produkImg}" alt="foto produk" class="keranjang-img">
+        <div class="detail-box">
+            <p class="produck-title">${title}</p>
+            <span class="keranjand-price">${price}</span>
+            <input type="number" value="1" class="card-quantity">
+        </div>
+        <i class="fa-solid fa-trash icon-remove"></i>
+    `;
+    cartShopBox.innerHTML = cartBoxContent;
+
+    keranjangKontent.appendChild(cartShopBox);
+
+    cartShopBox.querySelector('.icon-remove').addEventListener('click', removeCartItem);
+    cartShopBox.querySelector('.card-quantity').addEventListener('change', quantityChanged);
+}
+
+function updatetotal() {
+    var keranjangKontent = document.querySelector('.keranjang-kontent');
+    var keranjangBoxes = keranjangKontent.querySelectorAll('.keranjang-box');
+    var total = 0;
+
+    for (var i = 0; i < keranjangBoxes.length; i++) {
+        var box = keranjangBoxes[i];
+        var priceElement = box.querySelector('.keranjand-price');
+        var quantityElement = box.querySelector('.card-quantity');
+
+        var price = parseFloat(priceElement.innerText.replace(/[^0-9.-]+/g, '').trim());
+        var quantity = parseInt(quantityElement.value);
+
+        if (!isNaN(price) && !isNaN(quantity)) {
+            total += price * quantity;
+        }
+    }
+
+    document.querySelector('.total-price').innerText = 'Rp' + total.toLocaleString('id-ID', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+    });
+}

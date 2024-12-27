@@ -1,0 +1,902 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+BE+WAL+Guides&family=Playwrite+TZ+Guides&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Black+Ops+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+BE+WAL+Guides&family=Playwrite+TZ+Guides&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: sans-serif, 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+/* transition: all 0.9s ease-in-out; */
+    
+}
+
+
+
+:before,
+:after {
+    padding: 0%;
+    margin: 0%;
+}
+
+
+body {
+    height: 6000px;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+
+/* HEADER */
+.menu-btn {
+    color: white;
+    cursor: pointer;
+    font-size: 23px;
+    display: none;
+
+}
+
+.navbar {
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+    top: 0%;
+    background-color: black;
+    box-shadow: 5px 5px 20px white;
+}
+
+.navbar .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px !important;
+}
+
+.navbar .logo img{
+    width: 70%;
+    height: auto;
+    align-items: center;
+    margin: 0;  
+}
+
+
+
+.navbar .logo h1 {
+    margin: 0;
+    position: relative;
+    font-size: 25px;
+    font-family: Black Ops One;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5 linear infinite;
+
+}
+
+.navbar .menu-opsion li {
+    list-style: none;
+    display: inline-block;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5 linear infinite;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 20px;
+    position: relative;
+    gap: 3rem;
+}
+
+.navbar .logo-button li {
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5 linear infinite;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 20px;
+    position: relative;
+}
+
+/* keranjang */
+.keranjang-div{
+    padding: 20px 5%;
+    display: flex;
+   
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+    top: 0%;
+    background-color: black;
+    box-shadow: 5px 5px 20px white;
+}
+
+.keranjang{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 30rem;
+    padding: 30px;
+    background-color: white;
+    transition: 0.3s;
+    height: 100vh;
+    overflow: auto; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+    
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+   
+}
+
+.keranjang.active{
+    right: 0;
+}
+
+.keranjang-box{
+    display: grid;
+    grid-template-columns: 1fr 2fr 0.5fr;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+    
+}
+
+.detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+    
+}
+
+.keranjang-item{
+    font-size: 1.rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.keranjand-price{
+    font-weight: 600;
+    
+}
+.product-title{
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: left  ;
+}
+
+.card-quantity{
+    border: 1px solid black;
+    outline-color:  red;
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem; 
+}
+
+.icon-remove{
+    font-size: 24px;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+    cursor: pointer;
+}
+
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top:1px solid #000000;    
+}
+
+.total-title{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 3px;
+}
+
+.total-price{
+    margin-left: 0.5rem;
+    margin: 3px;
+}
+
+.btn-buy{
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    border-radius: 15px;
+    text-shadow: 5px 5px 10px rgba(5, 5, 10, 0.5);    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    animation: animate-gradient 2.5 linear infinite;
+}
+
+.btn-buy :hover{
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    transform: scale(1.10);
+}
+
+#close-keranjang{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+    cursor: pointer;
+
+}
+
+
+.keranjang-img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 10px;
+}
+
+
+.keranjang-title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+
+/* keranjang end */
+
+.navbar .menu-opsion a:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    transition: 0.3s;
+    left: 0%;
+    bottom: 0px;
+}
+
+.navbar .logo-button a:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    transition: 0.3s;
+    left: 0%;
+    bottom: 0px;
+}
+
+.navbar .menu-opsion a:before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    transition: 0.3s;
+    right: 0%;
+    top: 0px;
+}
+
+.navbar .logo-button a:before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    transition: 0.3s;
+    right: 0%;
+    top: 0px;
+}
+
+.navbar .menu-opsion a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.navbar .logo-button a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.navbar .menu-opsion a:hover:after {
+    width: 100%;
+}
+
+.navbar .logo-button a:hover:after {
+    width: 100%;
+}
+
+.navbar .menu-opsion a:hover:before {
+    width: 100%;
+}
+
+.navbar .logo-button a:hover:before {
+    width: 100%;
+}
+
+
+
+@keyframes animate-gradient {
+    to {
+        background-position: 200%;
+    }
+}
+
+/* responsif layar */
+#menu-button {
+    display: none;
+}
+
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+
+}
+
+/* Tab */
+@media (max-width: 768px) {     
+    html {
+        font-size: 62.5%;
+    }
+
+    #menu-button {
+        display: inline-block;
+    }
+
+    .navbar .menu-opsion {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgb(0, 0, 0);
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .menu-opsion.active {
+        right: 0%;
+    }
+
+    .navbar .menu-opsion li {
+        display: block;
+        margin: 1, 5rem;
+        padding: 0, 5rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar .menu-opsion li::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .menu-opsion li:hover::after {
+        transform: scaleX(0.2);
+    }
+
+    .about .about-div {
+        flex-wrap: wrap;
+    }
+
+    .card-container .card-item img{
+        width: 150px;
+    }
+
+    .keranjang {
+        width: 30rem;
+    }
+
+    .keranjang-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .keranjang-title {
+        font-size: 1.5rem;
+    }
+
+    .total-title,
+    .total-price {
+        font-size: 1rem;
+    }
+
+    
+}
+
+/* Hp */
+@media (max-width: 450px) {
+    html {
+        font-size: 60%;
+    }
+
+    .card .card-container .card-item{
+        width: 100px;
+    }
+}
+
+
+/* HEADER END */
+
+
+/* content */
+/* Beranda */
+.sec-bg {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(SRC/background\ \(2\).jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 15px 20px;
+
+}
+
+.sec-bg:after { 
+    left: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 3%, rgba(255, 255, 255, 0) 25%);
+
+}
+
+.sec-bg .content {
+    padding: 30px 40px;
+    color: rgb(255, 255, 255);
+    max-width: 60rem;
+}
+
+.sec-bg .content h1 {
+    font-size: 6em;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    font-weight: bold;
+    line-height: 1;
+}
+
+.sec-bg .content p {
+    font-size: 2.3rem;
+    font-weight: 100;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.sec-bg .content .buton {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: white;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    border-radius: 15px;
+    text-shadow: 5px 5px 10px rgba(5, 5, 10, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    animation: animate-gradient 2.5s linear infinite;
+}
+
+.sec-bg .content .buton :hover{
+    transform: scale(1.1); 
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4); 
+}
+
+
+/* Beranda end */
+
+/* About */
+.about {
+    padding: 150px 55px;
+    color: aliceblue;
+    min-height: 100vh;
+    bottom: 0;
+}
+
+.about .about-h2 {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    font-family: 'Black Ops One', sans-serif;
+    font-size: 30px;
+    position: relative;
+    list-style: none;
+    width: 100%; 
+    height: 100%;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+    margin: 0.5rem;
+}
+
+.about .about-div {
+    display: flex;
+    margin-top: 25;
+}
+
+.about .about-div .about-img {
+    flex: 1 1 45rem;
+}
+
+.about .about-div .about-img img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.about .about-div .about-content {
+    flex: 1 1 35rem;
+    padding: 0 0.5rem;
+}
+
+.about .about-div .about-content h3 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    font-weight: bold;
+    line-height: 1;
+}
+
+.about .about-div .about-content h3 span {
+    position: relative;
+    list-style: none;
+    width: 100%; 
+    height: 100%;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+    margin: 0.5rem;
+}
+
+.about .about-div .about-content p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    line-height: 1;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.video{
+    display: flex;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.video .source{
+    top: 0;
+}
+/* About end */
+
+/* Card */
+.card {
+    padding: 150px 55px;
+    color: white;
+    min-height: 100vh;
+}
+
+
+.card .card-shoes {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    font-family: 'Black Ops One', sans-serif;
+    font-size: 30px;
+    position: relative;
+    list-style: none;
+    width: 100%; 
+    height: 100%;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+    margin: 0.5rem;
+}
+
+
+.card .name-card {
+    text-align: left;
+    position: relative;
+    font-size: 30px;
+    font-family: Black Ops One;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5 linear infinite;
+    margin: 0.5rem;
+    margin-top: 1rem;
+    font-family: Black Ops One;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.card .card-container .card-item {
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    margin-bottom: 10px;
+
+
+}
+
+.card-container .card-item img{
+    width: 200px;  
+}
+
+.card-container {
+    display: flex; 
+    flex-wrap: nowrap; /* Prevent wrapping of items */
+    gap: 60px; 
+    max-width: 100%; /* Allow the container to take the full width of its parent */
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    padding-bottom: 10px;
+    margin-top: 1rem;
+    margin-bottom: 15rem;
+    scrollbar-width: none; /* For Firefox: hide scrollbar */
+    
+}
+
+/* Style the card items */
+.card-item {
+    width: 300px; /* Set a fixed width for each card item */
+    height: auto;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #131111;
+    border-radius: 10%;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Optional: Style buttons */
+.button-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding-inline: 1.6rem;
+
+}
+.product-desc{
+    font-size: 0.8rem;
+    text-align: justify;
+    color: #dfdbdb;
+    margin-top: 10px;
+}
+.button-group .buy-button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;  
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+
+    
+}
+
+.cart-button {
+    padding: 8px 12px;
+    cursor: pointer;   
+}
+
+/* Tombol Tambahkan ke Keranjang */
+.cart-button {
+    list-style: none;
+    display: inline-block;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5 linear infinite;
+}
+
+.cart-button i:hover {
+    list-style: none;
+    display: inline-block;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5 linear infinite;
+    transform: scale(1.50); /* Efek zoom */
+}
+
+/* Ikon pada tombol Tambahkan ke Keranjang */
+.cart-button i {
+    font-size: 1.4rem;
+}
+/* Card end*/
+
+
+/* Kontak */
+/* Contact Section */
+.contact {
+    padding: 150px 55px;
+    color: aliceblue;
+    min-height: 100vh;
+    bottom: 0;
+}
+
+.contact .heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.contact .heading span{
+    list-style: none;
+    display: inline-block;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5 linear infinite;
+    font-family: Black Ops One;
+}
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+/* Google Maps Styling */
+.contact .row .map {
+    flex: 1 1 40%;
+    height: 450px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    border: 2px solid #8f68ff;
+}
+
+/* Form Styling */
+.contact .row form {
+    flex: 1 1 50%;
+    padding: 2rem;
+    border: 2px solid #8f68ff;
+    border-radius: 8px;
+    background: black;
+    color: #fff;
+}
+
+.contact .row form h3 {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.contact .row form .inputBox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem 1rem;
+    background-color: #131111;
+    border-radius: 6px;
+}
+
+.contact .row form .inputBox span {
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.contact .row form .inputBox input {
+    flex: 1;
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+/* Button Styling */
+.contact .row form .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    border-radius: 15px;
+    text-shadow: 5px 5px 10px rgba(5, 5, 10, 0.5);    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    animation: animate-gradient 2.5 linear infinite;
+}
+
+.contact .row form .btn:hover {
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    transform: scale(1.10);
+}
+
+.img-content{
+    overflow: hidden;
+    display: flex;
+}
+
+.img-content .img-gerak{
+    display: flex;
+    flex-shrink: 0;
+    gap: 1rem;
+    animation: marquee 10s linear infinite;
+
+}
+
+.img-content .img-gerak img{
+    width: 100%;
+}
+
+@keyframes marquee {
+	0%   { transform: translateX(0%); }
+	100% { transform: translateX(-100%); }
+}
+
+    
+
+
+
+    /* Kontak End */
+

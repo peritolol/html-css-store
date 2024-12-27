@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRB_GarasiSneakers</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+</head>
+<body id="test">
+    <nav class="navbar" id="">
+        <div class="logo">
+            <img src="SRC/logo.png" alt="logo">
+            <!-- <h1 style="font: bolder; font-size: 2rem; margin-left: 60px;">SRB> <br> <span style="font-family: Agbalumo;">GarasiSneakers</span></h1> -->
+        </div>
+        <ul class="menu-opsion">
+            <li><a href="#beranda">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#card">SHOES</a></li>
+            <li><a href="#kontak">KONTAK</a></li>   
+        </ul>
+
+        <div class="logo-button">
+            <ul>
+                <li><a href="#" id=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="#" id="icon-keranjang"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="#" id="menu-button"><i class="fa-solid fa-list"></i></a></li>
+            </ul>
+        </div>
+    
+        <!-- keranjang -->
+        <section class="keranjang">
+            
+                <h2 class="keranjang-title">
+                    Your Keranjang
+                </h2>
+            
+        
+            <!-- Kontainer untuk item keranjang -->
+            <div class="keranjang-kontent">
+                <!-- Contoh item dalam keranjang -->
+            </div>
+        
+            <!-- Bagian total -->
+            <div class="total">
+                <span class="total-title">Total:</span>
+                <span class="total-price">Rp0</span>
+            </div>
+        
+            <!-- Tombol pembelian -->
+            <button type="button" class="btn-buy">Buy Now</button>
+        
+            <!-- Tombol tutup keranjang -->
+            <i class="fa-solid fa-x" id="close-keranjang"></i>
+        </section>
+         
+        <!-- keranjang end -->
+    </nav>
+    <!-- Beranda -->
+    <section id="beranda" class="sec-bg" >
+        <main class="content">
+            <h1>Second Branded Shoes</h1>
+            <p style=" font: bold;">Promo all item 650K</p>
+        <br>
+            <a href="#card" class="buton">BUY NOW</a>
+        </main>    
+    </section>
+    <!-- Beranda end -->
+
+    <!-- about -->
+     <section id="about" class="about">
+       <h2 class="about-h2">We Are</h2>
+       <div class="about-div">
+        <div class="about-img">
+            <img src="SRC/about.1.jpg" alt="tentang kami">
+        </div>
+        <div class="about-content">
+            <h3>Second Branded <span>Shoes</span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, earum cumque laudantium natus delectus sed quibusdam accusamus debitis ea est quaerat nisi et rem ex quos quam praesentium aut unde?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam rem asperiores eum, repellat, quos laboriosam eius dolores id modi quo deserunt facere placeat quis facilis qui esse! Doloribus, id.</p>
+        </div>
+       </div>
+     </section>
+     <section class="video">
+        <video width="100%" height=""controls autoplay loop muted>
+            <source src="SRC/video.srb.mp4" type="video/mp4">
+        </video>
+     </section>
+        
+    <!-- about end -->
+    <!-- Card -->
+     
+    <section id="card" class="card">
+        <h2 class="card-shoes">Shoes</h2>
+        <h3 class="name-card">NIKE</h3>
+        <div class="card-container">
+            <div class="card-item">
+                <img src="SRC/gambar2.png" alt="foto toko">
+                <h1 class="product-title">Nike V2</h1>
+                <p class="product-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad officiis omnis dolores impedit minus a excepturi quaerat aspernatur incidunt magnam quis enim perferendis illum eaque molestias esse neque, ab facere.</p>
+           
+                <div class="button-group">
+                    <p class="button-text" data-price="Rp 650.000">Rp 650.000</p>
+                    <button class="cart-button">
+                        <i class="fa-solid fa-cart-shopping add-cart"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-item">
+                <img src="SRC/gambar2.png" alt="foto toko">
+                <h1 class="product-title">Nike V3</h1>
+                <p class="product-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad officiis omnis dolores impedit minus a excepturi quaerat aspernatur incidunt magnam quis enim perferendis illum eaque molestias esse neque, ab facere.</p>
+           
+                <div class="button-group">
+                    <p class="button-text" data-price="Rp 650.000">Rp 650.000</p>
+                    <button class="cart-button">
+                        <i class="fa-solid fa-cart-shopping add-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        </section>
+    <!-- Card end -->
+
+    <!-- kontak -->
+    <section class="contact" id="kontak">
+        <h1 class="heading"> <span>Contact US</span></h1>
+        <div class="row">
+            <!-- Google Maps Embed -->
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!4v1734878761386!6m8!1m7!1sfsce5b83vEqd0l_gTMsdBw!2m2!1d-0.01937061125630885!2d109.3172658343386!3f312.4577639735152!4f-9.248738804567694!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+    
+            <!-- Contact Form -->
+            <form action="">
+                <h3 style="text-align: center;">Get in Touch</h3>
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="Name" required>
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-phone"></span>
+                    <input type="number" placeholder="Phone Number" required>
+                </div>
+                <input type="submit" value="Contact Now" class="btn">
+            </form>
+        </div>
+    </section>
+         
+    <!-- kontak end -->
+     
+    <footer>
+        <div class="img-content">
+            <div id="gerak" class="img-gerak">
+                <img src="SRC/logo.png" alt="SRB_GarasiSneakers">
+
+                <img src="SRC/logo.png" alt="SRB_GarasiSneakers">
+
+                <img src="SRC/logo.png" alt="SRB_GarasiSneakers">
+
+                <img src="SRC/logo.png" alt="SRB_GarasiSneakers">
+
+                <img src="SRC/logo.png" alt="SRB_GarasiSneakers">
+
+                <img src="SRC/logo.png" alt="SRB_GarasiSneakers">
+
+                <img src="SRC/logo.png" alt="SRB_GarasiSneakers">
+
+                <img src="SRC/logo.png" alt="SRB_GarasiSneakers">
+
+            </div>
+            <div aria-hidden  id="gerak" class="img-gerak">
+                <img src="SRC/logo.png" alt="SRB_GarasiSneakers">
+
+                <img src="SRC/logo.png" alt="SRB_GarasiSneakers">
+
+                <img src="SRC/logo.png" alt="SRB_GarasiSneakers">
+
+                <img src="SRC/logo.png" alt="SRB_GarasiSneakers">
+
+                <img src="SRC/logo.png" alt="SRB_GarasiSneakers">
+
+                <img src="SRC/logo.png" alt="SRB_GarasiSneakers">
+
+                <img src="SRC/logo.png" alt="SRB_GarasiSneakers">
+
+                <img src="SRC/logo.png" alt="SRB_GarasiSneakers">
+
+            </div>
+        </div>
+<br>
+<br>
+        <p class="copyright" style="text-align: center;">
+            &copy; CopyRight 2024  &mdash; <span id="years"></span>
+        </p>
+    </footer>
+
+     <script>
+
+        var date = new date();
+        var year = date.getFullYear();
+        document.getElementById('years').innerHTML = year;
+
+        feather.replace()
+     </script>
+     <!-- little js -->
+      <script src="script.js"></script>
+      <!-- little js end -->
+</body>
+</html>
