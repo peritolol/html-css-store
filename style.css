@@ -227,7 +227,6 @@ body {
     display: flex;
     margin: 1.5rem auto 0 auto;
     padding: 12px 20px;
-    border: none;
     text-transform: uppercase;
     color: #fff;
     background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
@@ -460,6 +459,10 @@ body {
     .logo-button ul li a i{
         
         font-size: 2rem;
+    }
+
+    .navbar .logo-button a{
+        margin-inline:5px ;
     }
 }
 
