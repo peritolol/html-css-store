@@ -10,7 +10,7 @@
     border: none;
     font-family: sans-serif, 'Times New Roman', Times, serif;
     scroll-behavior: smooth;
-   overflow-x: hidden;
+
 /* transition: all 0.9s ease-in-out; */
     
 }
@@ -29,7 +29,11 @@ body {
     background-color: black;
     padding: 0;
     margin: 0;
+   
  
+}
+.overflow-hiden{
+
 }
 
 /* HEADER */

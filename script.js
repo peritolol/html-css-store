@@ -2,6 +2,7 @@
 const menuOpsion = document.querySelector('.menu-opsion');
 const menuButton = document.querySelector('#menu-button');
 
+    document.querySelector("*").style.overflowX  = "hidden"
 
 
 if (menuButton && menuOpsion) {
@@ -14,6 +15,7 @@ if (menuButton && menuOpsion) {
     document.addEventListener('click', function (e) {
         if (!menuOpsion.contains(e.target) && !menuButton.contains(e.target)) {
             menuOpsion.classList.remove('active');
+       document.querySelector("*").style.overflowX  = "hidden"
         }
     });
 }
