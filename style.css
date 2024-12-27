@@ -105,7 +105,6 @@ body {
 .navbar .logo-button a {
     cursor: pointer;
     list-style: none;
- 
     background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
     background-size: 200%;
     background-clip: text;
@@ -114,6 +113,7 @@ body {
     animation: animate-gradient 2.5 linear infinite;
     font-size: 20px;
     font-weight: bold;
+    margin-inline:10px ;
     padding: 15px 10px;
     position: relative;
 }
@@ -478,7 +478,7 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-position: relative;
+    position: relative;
     padding: 15px 20px;
 
 }
@@ -540,7 +540,7 @@ position: relative;
     padding: 150px 55px;
     color: aliceblue;
     min-height: 100vh;
-    bottom: 0;
+    
 }
 
 .about .about-h2 {
@@ -633,10 +633,11 @@ position: relative;
 
 /* Card */
 .card {
-   margin-block: 20rem;
-    color: white;
-  
+    margin-block: 20rem;
+    color: white; 
+    padding: 150px 55px; 
 }
+
 
 
 .card .card-shoes {
@@ -656,7 +657,7 @@ position: relative;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: animate-gradient 2.5s linear infinite;
-    margin: 0.5rem;
+
 }
 
 
@@ -785,7 +786,7 @@ position: relative;
 /* Kontak */
 /* Contact Section */
 .contact {
-    
+    padding: 150px 55px; 
     color: aliceblue;
     min-height: 100vh;
     bottom: 0;
