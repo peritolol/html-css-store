@@ -119,71 +119,158 @@ body {
 }
 
 /* keranjang */
-.keranjang-div{
-    padding: 20px 5%;
-    display: flex;
-   
-    align-items: center;
-    position: sticky;
-    z-index: 999;
-    top: 0%;
-    background-color: black;
-    box-shadow: 5px 5px 20px white;
-}
-
-.keranjang{
-    position: fixed;
+.keranjang {
+    position: fixed; /* Posisi tetap di layar */
+    color: white;
     top: 0;
+    z-index: 999;
     right: -100%;
     width: 30rem;
     padding: 30px;
-    background-color: white;
+    background-color: black;
     transition: 0.3s;
     height: 100vh;
-    overflow: auto; 
+    overflow-y: auto;
     scrollbar-width: none; 
     -ms-overflow-style: none;
-    
-
-    ::-webkit-scrollbar {
-        display: none;
-    }
-   
+    box-shadow: 5px 5px 20px white;
+    display: block;
 }
 
-.keranjang.active{
+.keranjang::-webkit-scrollbar {
+    display: none;
+}
+
+/* Ketika keranjang aktif */
+.keranjang.active {
     right: 0;
 }
 
-.keranjang-box{
+/* Header Keranjang - tetap di atas */
+.keranjang-header {
+    position: fixed;
+    width:26rem;
+    top: 0;
+    background-color: black;
+    padding: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 5px 5px 20px white;
+}
+
+/* Judul dan tombol close */
+.keranjang-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+
+/* Tombol close */
+#close-keranjang {
+    font-size: 2rem;
+    cursor: pointer;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+
+/* Konten Keranjang (item) */
+.keranjang-kontent {
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+    width: 100%;  /* Atur lebar sesuai keinginan (misalnya 80%) */
+    max-width: 30rem;  /* Tentukan ukuran maksimal jika perlu */
+    margin-left: auto;  /* Membuat konten berada di tengah */
+    margin-right: auto;
+}
+
+/* Footer Keranjang - tetap di bawah */
+.keranjang-footer {
+    position: fixed;
+    width:26rem;
+    bottom: 0;
+    background-color: black;
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    box-shadow: 5px 5px 20px white;
+}
+
+/* Total dan tombol buy now */
+.total {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.total-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.total-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.btn-buy {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    border-radius: 15px;
+    text-shadow: 5px 5px 10px rgba(5, 5, 10, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    animation: animate-gradient 2.5s linear infinite;
+}
+
+.btn-buy:hover {
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    transform: scale(1.10);
+}
+
+/* Styling untuk item dalam keranjang */
+.keranjang-box {
     display: grid;
     grid-template-columns: 1fr 2fr 0.5fr;
     gap: 1rem;
     align-items: center;
     margin-top: 1rem;
-    
 }
 
-.detail-box{
+.detail-box {
     display: grid;
     row-gap: 0.5rem;
-    
 }
 
-.keranjang-item{
-    font-size: 1.rem;
+.keranjang-item {
+    font-size: 1rem;
     text-transform: uppercase;
     font-weight: 900;
 }
 
-.keranjand-price{
+.keranjang-price {
     font-weight: 600;
-    
-}
-.product-title{
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-align: left  ;
 }
 
 .card-quantity{
@@ -194,7 +281,8 @@ body {
     font-size: 1rem; 
 }
 
-.icon-remove{
+/* Ikon Hapus */
+.icon-remove {
     font-size: 24px;
     background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
     background-size: 200%;
@@ -205,77 +293,11 @@ body {
     cursor: pointer;
 }
 
-.total{
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 1.5rem;
-    border-top:1px solid #000000;    
-}
-
-.total-title{
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 3px;
-}
-
-.total-price{
-    margin-left: 0.5rem;
-    margin: 3px;
-}
-
-.btn-buy{
-    display: flex;
-    margin: 1.5rem auto 0 auto;
-    padding: 12px 20px;
-    text-transform: uppercase;
-    color: #fff;
-    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
-    border-radius: 15px;
-    text-shadow: 5px 5px 10px rgba(5, 5, 10, 0.5);    border: none;
-    cursor: pointer;
-    transition: 0.3s ease;
-    animation: animate-gradient 2.5 linear infinite;
-}
-
-.btn-buy :hover{
-    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
-    transform: scale(1.10);
-}
-
-#close-keranjang{
-    position: absolute;
-    top: 1rem;
-    right: 0.8rem;
-    font-size: 2rem;
-    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
-    background-size: 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: animate-gradient 2.5s linear infinite;
-    cursor: pointer;
-
-}
-
-
-.keranjang-img{
+.keranjang-img {
     width: 100px;
     height: 100px;
     object-fit: contain;
     margin: 10px;
-}
-
-
-.keranjang-title{
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 900;
-    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
-    background-size: 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: animate-gradient 2.5s linear infinite;
 }
 
 /* keranjang end */
@@ -369,6 +391,7 @@ body {
     html {
         font-size: 75%;
     }
+    
 
 }
 
@@ -393,6 +416,7 @@ body {
         width: 30rem;
         height: 100vh;
         transition: 0.3s;
+        box-shadow: 5px 5px 20px white;
     }
 
     .navbar .menu-opsion.active {
@@ -462,8 +486,10 @@ body {
     }
 
     .navbar .logo-button a{
-        margin-inline:5px ;
+        margin-inline:2px ;
     }
+
+
 }
 
 
@@ -792,7 +818,6 @@ body {
     padding: 150px 55px; 
     color: aliceblue;
     min-height: 100vh;
-    bottom: 0;
 }
 
 .contact .heading {

@@ -45,25 +45,27 @@
 
       <!-- keranjang -->
       <section class="keranjang">
-        <h2 class="keranjang-title">Your Keranjang</h2>
-
+        <!-- Kontainer Keranjang -->
+        <div class="keranjang-header">
+            <h2 class="keranjang-title">Your Keranjang</h2>
+            <i class="fa-solid fa-x" id="close-keranjang"></i>
+        </div>
+        
         <!-- Kontainer untuk item keranjang -->
         <div class="keranjang-kontent">
-          <!-- Contoh item dalam keranjang -->
+            <!-- Contoh item dalam keranjang -->
         </div>
-
-        <!-- Bagian total -->
-        <div class="total">
-          <span class="total-title">Total:</span>
-          <span class="total-price">Rp0</span>
+    
+        <!-- Bagian total dan tombol pembelian -->
+        <div class="keranjang-footer">
+            <div class="total">
+                <span class="total-title">Total:</span>
+                <span class="total-price">Rp0</span>
+            </div>
+            <button type="button" class="btn-buy">Buy Now</button>
         </div>
-
-        <!-- Tombol pembelian -->
-        <button type="button" class="btn-buy">Buy Now</button>
-
-        <!-- Tombol tutup keranjang -->
-        <i class="fa-solid fa-x" id="close-keranjang"></i>
-      </section>
+    </section>
+    
 
       <!-- keranjang end -->
     </nav>
