@@ -164,7 +164,7 @@ body {
 
 /* Judul dan tombol close */
 .keranjang-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 900;
     background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
     background-size: 200%;
@@ -488,7 +488,6 @@ body {
     .navbar .logo-button a{
         margin-inline:2px ;
     }
-
 
 }
 
