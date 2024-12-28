@@ -144,7 +144,7 @@ function quantityChanged(event) {
 
 // Fungsi untuk membeli item
 function buyButtonClicked() {
-    alert('Trimakasih Sudah Berbelanja 🥰 Pesanan Anda Akan di Proses secepatnya !!!');
+    alert('Trimakasih Sudah Berbelanja 🥰 Pesanan Anda Akan di Proses secepatnya !!! ');
     var cartContent = document.querySelector('.keranjang-kontent');
     while (cartContent.hasChildNodes()) {
         cartContent.removeChild(cartContent.firstChild);
