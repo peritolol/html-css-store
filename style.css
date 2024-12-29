@@ -159,7 +159,6 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 5px 5px 20px white;
 }
 
 /* Judul dan tombol close */
