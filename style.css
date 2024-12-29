@@ -10,7 +10,7 @@
     border: none;
     font-family: sans-serif, 'Times New Roman', Times, serif;
     scroll-behavior: smooth;
-
+    color: white;
 /* transition: all 0.9s ease-in-out; */
     
 }
@@ -28,8 +28,6 @@ body {
     background-color: black;
     padding: 0;
     margin: 0;
-   
- 
 }
 .overflow-hiden{
 
@@ -272,11 +270,12 @@ body {
 }
 
 .card-quantity{
-    border: 1px solid black;
-    outline-color:  red;
+    border: 1px solid white;
+    border-radius: 3px;
     width: 2.4rem;
     text-align: center;
     font-size: 1rem; 
+    background-color: black;
 }
 
 /* Ikon Hapus */
@@ -463,8 +462,50 @@ body {
         font-size: 1rem;
     }
 
-    
+    .video {
+        flex-direction: column; /* Ubah menjadi susunan vertikal */
+        align-items: center; /* Tengahkan elemen */
+      
+    }   
+    .contact {
+        padding: 80px 30px; /* Adjust padding */
+    }
+
+    .contact .heading {
+        font-size: 2.2rem; /* Smaller font for heading */
+    }
+
+    .contact .row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact .row .map {
+        height: 300px;
+        width: 100%; /* Adjust map height for smaller screens */
+    }
+
+    .contact .row .contact-form {
+        flex: 1 1 100%;
+    }
+
+    .contact .row form h3 {
+        font-size: 1.6rem; /* Smaller font for form heading */
+    }
+
+    .contact .row form .inputBox input,
+    .contact .row form .inputBox textarea {
+        font-size: 0.9rem;
+    }
+
+    .contact .row form .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
 }
+
+   
+
 
 /* Hp */
 @media (max-width: 450px) {
@@ -485,6 +526,33 @@ body {
 
     .navbar .logo-button a{
         margin-inline:2px ;
+    }
+    
+    .contact .heading {
+        font-size: 1.8rem; /* Smaller heading font */
+    }
+
+    .contact .row .map {
+        height: 250px;
+       /* Further reduce map size */
+    }
+
+    .contact .row .contact-form {
+        padding: 1.5rem; /* Smaller padding */
+    }
+
+    .contact .row form h3 {
+        font-size: 1.4rem; /* Smaller form heading font */
+    }
+
+    .contact .row form .inputBox input,
+    .contact .row form .inputBox textarea {
+        font-size: 0.85rem;
+    }
+
+    .contact .row form .btn {
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
     }
 
 }
@@ -641,22 +709,62 @@ body {
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 
-.video{
-    display: flex;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    color: white;
-    text-align: center;
-    top: 0;
-    margin: 0;
-    padding: 0;
-    
+.video {
+    display: flex; /* Mengatur elemen dalam satu baris */
+    align-items: center; /* Menjaga teks dan video sejajar secara vertikal */
+    justify-content: space-between; /* Memberikan jarak antara teks dan video */
+    gap: 20px; /* Jarak horizontal antara teks dan video */
+    padding: 0 55px;
 }
 
-.video .source{
-    top: 0;
+.video-text{
+    flex: 1 1 35rem;
+    padding: 0 0.5rem;
 }
+
+.video-text h3 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    font-weight: bold;
+    line-height: 1;
+}
+
+.video-text h3 span {
+    font-size: 7rem;
+    position: relative;
+    list-style: none;
+    width: 100%; 
+    height: 100%;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+    margin: 0.5rem;
+}
+
+
+
+.video-text p {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    line-height: 1;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.video-short {
+    flex: 1; 
+    height: auto; 
+    width: 50%;
+    border: 10px solid transparent; /* Menetapkan border transparan */
+    border-image: linear-gradient(45deg,#fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff) 1; /* Border gradien */
+    border-radius: 10px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+}
+
 /* About end */
 
 /* Card */
@@ -814,9 +922,10 @@ body {
 /* Kontak */
 /* Contact Section */
 .contact {
-    padding: 150px 55px; 
+    padding: 155px 55px;
     color: aliceblue;
     min-height: 100vh;
+    background-color: black;
 }
 
 .contact .heading {
@@ -826,7 +935,7 @@ body {
     color: #fff;
 }
 
-.contact .heading span{
+.contact .heading span {
     list-style: none;
     display: inline-block;
     background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
@@ -835,7 +944,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: animate-gradient 2.5 linear infinite;
-    font-family: Black Ops One;
+    font-family: 'Black Ops One', sans-serif;
 }
 
 .contact .row {
@@ -847,21 +956,23 @@ body {
 
 /* Google Maps Styling */
 .contact .row .map {
-    flex: 1 1 40%;
-    height: 450px;
+    flex: 1 1 50%; /* Same width as the form */
+    height: 450px; /* Fixed height for both map and form */
     border-radius: 8px;
     border: 2px solid #8f68ff;
-    width :600;
+    width: 100%;
 }
 
 /* Form Styling */
 .contact .row .contact-form {
-    flex: 1 1 50%;
+    flex: 1 1 50%; /* Same width as the map */
     padding: 2rem;
     border: 2px solid #8f68ff;
     border-radius: 8px;
     background: black;
     color: #fff;
+    max-width: 600px;
+    margin: auto;
 }
 
 .contact .row form h3 {
@@ -871,11 +982,12 @@ body {
     color: #fff;
 }
 
+/* Input Box Styling */
 .contact .row form .inputBox {
     display: flex;
     align-items: center;
     margin-bottom: 1.5rem;
-    padding: 0.8rem 1rem;
+    padding: 0.6rem 1rem;
     background-color: #131111;
     border-radius: 6px;
 }
@@ -890,7 +1002,8 @@ body {
     margin-right: 1rem;
 }
 
-.contact .row form .inputBox input {
+.contact .row form .inputBox input,
+.contact .row form .inputBox textarea {
     flex: 1;
     padding: 0.8rem;
     font-size: 1rem;
@@ -898,6 +1011,11 @@ body {
     border: none;
     background: none;
     outline: none;
+}
+
+.contact .row form .inputBox textarea {
+    resize: vertical;
+    min-height: 120px;
 }
 
 /* Button Styling */
@@ -909,7 +1027,8 @@ body {
     color: #fff;
     background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
     border-radius: 15px;
-    text-shadow: 5px 5px 10px rgba(5, 5, 10, 0.5);    border: none;
+    text-shadow: 5px 5px 10px rgba(5, 5, 10, 0.5);    
+    border: none;
     cursor: pointer;
     transition: 0.3s ease;
     animation: animate-gradient 2.5 linear infinite;
@@ -920,6 +1039,7 @@ body {
     transform: scale(1.10);
 }
 
+  /* Kontak End */
 .img-content{
     overflow: hidden;
     display: flex;
@@ -941,10 +1061,33 @@ body {
 	0%   { transform: translateX(0%); }
 	100% { transform: translateX(-100%); }
 }
+  
+/* footer */
+.icon-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
 
-    
+.icon-footer a {
+    font-size: 2.5rem; /* Ukuran ikon */
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
 
+.icon-footer a:hover {
+    transform: scale(1.10);
+}
 
-
-    /* Kontak End */
-
+.copyright{
+    color: white;
+    margin-bottom: 2rem;
+}
+/* footer end */

@@ -72,7 +72,6 @@
     <!-- Beranda -->
     <section id="beranda" class="sec-bg">
       <main class="content">
-        <h1>Second Branded Shoes</h1>
         <p style="font: bold">Promo all item 650K</p>
         <br />
         <button href="#card" class="buton">BUY NOW</button>
@@ -104,7 +103,14 @@
       </div>
     </section>
     <section class="video">
-      <video width="100%" height="" controls autoplay loop muted>
+      <div class="video-text">
+        <h3>Second Branded <span>Shoes</span></h3>
+      <br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, excepturi! Neque error aliquid, debitis porro eos dicta, labore excepturi, maxime aut quas ipsam blanditiis laudantium rem reprehenderit unde minus aperiam!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas nihil eveniet iusto. Temporibus tempore laboriosam sint! Dicta dignissimos sunt cumque sit dolorum. Rerum, sunt laudantium animi sed aspernatur nihil minima?</p>
+      </div>
+      
+      <video controls autoplay loop muted class="video-short">
         <source src="SRC/video.srb.mp4" type="video/mp4" />
       </video>
     </section>
@@ -819,38 +825,37 @@
 
     <!-- kontak -->
     <section class="contact" id="kontak">
-      <h1 class="heading"><span>Contact US</span></h1>
+      <h1 class="heading"><span>Contact Us</span></h1>
       <div class="row">
         <!-- Google Maps Embed -->
         <iframe
           class="map"
           src="https://www.google.com/maps/embed?pb=!4v1734878761386!6m8!1m7!1sfsce5b83vEqd0l_gTMsdBw!2m2!1d-0.01937061125630885!2d109.3172658343386!3f312.4577639735152!4f-9.248738804567694!5f0.7820865974627469"
-          
           height="450"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
-
+    
         <!-- Contact Form -->
         <form action="" class="contact-form">
-          <h3 style="text-align: center; font-size: 2rem; font-family: Black Ops One;">Get in Touch</h3>
           <div class="inputBox">
             <span class="fas fa-user"></span>
-            <input type="text" placeholder="Name" required />
-          </div>
-          <div class="inputBox">
-            <span class="fas fa-envelope"></span>
-            <input type="email" placeholder="Email" required />
+            <input type="text" placeholder="Your Name" required />
           </div>
           <div class="inputBox">
             <span class="fas fa-phone"></span>
             <input type="number" placeholder="Phone Number" required />
           </div>
-          <input type="submit" value="Contact Now" class="btn" />
+          <div class="inputBox">
+            <span class="fas fa-comment"></span>
+            <textarea placeholder="Your Message" required></textarea>
+          </div>
+          <input type="submit" value="Send Message" class="btn" />
         </form>
       </div>
     </section>
+    
 
     <!-- kontak end -->
 
@@ -892,9 +897,16 @@
         </div>
       </div>
       <br />
-      <br />
+      <br>
+      <div class="icon-footer"> 
+          <a href="https://www.instagram.com/srb_garasisneakers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/6281216091037/"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+      </div>
+      <br>
+      <br>
       <p class="copyright" style="text-align: center">
-        &copy; CopyRight 2024 &mdash; <span id="years"></span>
+        &copy; SRB_GarasiSneakers 2024 &mdash; <span id="years"></span>
       </p>
     </footer>
 
