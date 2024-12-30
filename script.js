@@ -176,3 +176,27 @@ function updatetotal() {
         maximumFractionDigits: 2,
     });
 }
+
+// kontak
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Mencegah form untuk submit secara normal
+    
+    // Ambil data form
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var message = document.getElementById("message").value;
+
+    // Menyusun pesan untuk dikirim ke WhatsApp
+    var waMessage = `Name: ${name}\nPhone: ${phone}\nMessage: ${message}`;
+
+    // Encode pesan agar aman untuk URL
+    var encodedMessage = encodeURIComponent(waMessage);
+
+    // Nomor WhatsApp tujuan (gunakan format internasional tanpa tanda '+')
+    var waNumber = "6281216091037"; // Ganti dengan nomor WhatsApp Anda
+
+    // Membuka WhatsApp dengan pesan yang sudah dikirim
+    var waUrl = `https://wa.me/${waNumber}?text=${encodedMessage}`;
+    window.open(waUrl, "_blank");
+});
+// kontak end

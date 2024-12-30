@@ -982,7 +982,12 @@ body {
     padding: 2rem;
     border: 2px solid #8f68ff;
     border-radius: 8px;
-    background: black;
+    background-image: url(SRC/Background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; /* Pastikan elemen memiliki dimensi */
+    height: auto;
     color: #fff;
     max-width: 600px;
     margin: auto;
@@ -1001,8 +1006,18 @@ body {
     align-items: center;
     margin-bottom: 1.5rem;
     padding: 0.6rem 1rem;
-    background-color: #131111;
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(2px); /* Efek blur yang ringan */
+    -webkit-backdrop-filter: blur(2px); /* Dukungan untuk Safari */
     border-radius: 6px;
+    outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: white; /* Warna placeholder */
+    font-style: italic; /* Opsional: mengubah gaya font */
+    outline: none;
 }
 
 .contact .row form .inputBox span {
@@ -1020,12 +1035,13 @@ body {
     flex: 1;
     padding: 0.8rem;
     font-size: 1rem;
-    color: #fff;
+    color: white;
     border: none;
     background: none;
     outline: none;
 }
 
+/* Mengubah warna teks yang sudah diketik menjadi hitam */
 .contact .row form .inputBox textarea {
     resize: vertical;
     min-height: 120px;
