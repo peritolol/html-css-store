@@ -178,25 +178,59 @@ function updatetotal() {
 }
 
 // kontak
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Mencegah form untuk submit secara normal
-    
-    // Ambil data form
-    var name = document.getElementById("name").value;
-    var phone = document.getElementById("phone").value;
-    var message = document.getElementById("message").value;
+// Inisialisasi EmailJS
+// Inisialisasi EmailJS
+try {
+    emailjs.init("c-S3UmbRoVXHDm-HU"); // Ganti dengan Public Key Anda
+    console.log("EmailJS diinisialisasi dengan sukses.");
+} catch (error) {
+    console.error("Gagal inisialisasi EmailJS:", error);
+}
 
-    // Menyusun pesan untuk dikirim ke WhatsApp
-    var waMessage = `Name: ${name}\nPhone: ${phone}\nMessage: ${message}`;
+// Menangani pengiriman form
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Mencegah pengiriman form secara default
 
-    // Encode pesan agar aman untuk URL
-    var encodedMessage = encodeURIComponent(waMessage);
+    // Ambil data dari form
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
 
-    // Nomor WhatsApp tujuan (gunakan format internasional tanpa tanda '+')
-    var waNumber = "6281216091037"; // Ganti dengan nomor WhatsApp Anda
+    // Data yang akan dikirim
+    const data = {
+        service_id: "service_euden8u", // Ganti dengan Service ID Anda
+        template_id: "template_j2j44xs", // Ganti dengan Template ID Anda
+        user_id: "c-S3UmbRoVXHDm-HU", // Ganti dengan Public Key Anda
+        template_params: {
+            from_name: name,
+            from_email: email,
+            message: message
+        }
+    };
 
-    // Membuka WhatsApp dengan pesan yang sudah dikirim
-    var waUrl = `https://wa.me/${waNumber}?text=${encodedMessage}`;
-    window.open(waUrl, "_blank");
+    // Kirim permintaan ke API EmailJS
+    fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST", // Metode HTTP
+        headers: {
+            "Content-Type": "application/json" // Header untuk JSON
+        },
+        body: JSON.stringify(data) // Data yang dikirim
+    })
+        .then(response => {
+            if (response.ok) {
+                console.log("Email berhasil dikirim.");
+                alert("Pesan Anda telah dikirim!");
+            } else {
+                return response.json().then(err => {
+                    console.error("Terjadi kesalahan:", err);
+                    alert("Terjadi kesalahan, coba lagi nanti.");
+                });
+            }
+        })
+        .catch(error => {
+            console.error("Kesalahan jaringan:", error);
+            alert("Kesalahan jaringan, coba lagi nanti.");
+        });
 });
+
 // kontak end
