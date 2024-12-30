@@ -196,11 +196,11 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
 
-    // Data yang akan dikirim
+   
     const data = {
-        service_id: "service_euden8u", // Ganti dengan Service ID Anda
-        template_id: "template_j2j44xs", // Ganti dengan Template ID Anda
-        user_id: "c-S3UmbRoVXHDm-HU", // Ganti dengan Public Key Anda
+        service_id: "service_euden8u",
+        template_id: "template_j2j44xs", 
+        user_id: "c-S3UmbRoVXHDm-HU",
         template_params: {
             from_name: name,
             from_email: email,
@@ -208,13 +208,13 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
         }
     };
 
-    // Kirim permintaan ke API EmailJS
+   
     fetch("https://api.emailjs.com/api/v1.0/email/send", {
-        method: "POST", // Metode HTTP
+        method: "POST",
         headers: {
-            "Content-Type": "application/json" // Header untuk JSON
+            "Content-Type": "application/json" 
         },
-        body: JSON.stringify(data) // Data yang dikirim
+        body: JSON.stringify(data) 
     })
         .then(response => {
             if (response.ok) {
