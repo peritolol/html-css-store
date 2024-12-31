@@ -11,8 +11,8 @@
     font-family: sans-serif, 'Times New Roman', Times, serif;
     scroll-behavior: smooth;
     color: white;
-/* transition: all 0.9s ease-in-out; */
-    
+    /* transition: all 0.9s ease-in-out; */
+
 }
 
 
@@ -28,10 +28,24 @@ body {
     background-color: black;
     padding: 0;
     margin: 0;
+    color: black;
 }
-.overflow-hiden{
 
+.container {
+    width: 80%;
+    min-height: 100vh;
+    margin-inline: auto;
+    padding-top: 155px;
 }
+
+.container-video {
+    width: 100%;
+    min-height: 100vh;
+    margin-inline: auto;
+    padding-top: 155px;
+}
+
+.overflow-hiden {}
 
 /* HEADER */
 .menu-btn {
@@ -55,17 +69,17 @@ body {
     box-shadow: 5px 5px 20px white;
 }
 
-.navbar .logo{
+.navbar .logo {
     display: flex;
     align-items: center;
     gap: 10px !important;
 }
 
-.navbar .logo img{
+.navbar .logo img {
     width: 70%;
     height: auto;
     align-items: center;
-    margin: 0;  
+    margin: 0;
 }
 
 
@@ -111,14 +125,15 @@ body {
     animation: animate-gradient 2.5 linear infinite;
     font-size: 20px;
     font-weight: bold;
-    margin-inline:10px ;
+    margin-inline: 10px;
     padding: 15px 10px;
     position: relative;
 }
 
 /* keranjang */
 .keranjang {
-    position: fixed; /* Posisi tetap di layar */
+    position: fixed;
+    /* Posisi tetap di layar */
     color: white;
     top: 0;
     z-index: 999;
@@ -129,7 +144,7 @@ body {
     transition: 0.3s;
     height: 100vh;
     overflow-y: auto;
-    scrollbar-width: none; 
+    scrollbar-width: none;
     -ms-overflow-style: none;
     box-shadow: 5px 5px 20px white;
     display: block;
@@ -147,7 +162,7 @@ body {
 /* Header Keranjang - tetap di atas */
 .keranjang-header {
     position: fixed;
-    width:26rem;
+    width: 26rem;
     top: 0;
     background-color: black;
     padding: 30px;
@@ -187,17 +202,20 @@ body {
 .keranjang-kontent {
     margin-top: 5rem;
     margin-bottom: 6rem;
-    width: 100%;  /* Atur lebar sesuai keinginan (misalnya 80%) */
-    max-width: 30rem;  /* Tentukan ukuran maksimal jika perlu */
-    margin-left: auto;  /* Membuat konten berada di tengah */
+    width: 100%;
+    /* Atur lebar sesuai keinginan (misalnya 80%) */
+    max-width: 30rem;
+    /* Tentukan ukuran maksimal jika perlu */
+    margin-left: auto;
+    /* Membuat konten berada di tengah */
     margin-right: auto;
-   
+
 }
 
 /* Footer Keranjang - tetap di bawah */
 .keranjang-footer {
     position: fixed;
-    width:26rem;
+    width: 26rem;
     bottom: 0;
     background-color: black;
     padding: 10px;
@@ -271,12 +289,12 @@ body {
     font-weight: 600;
 }
 
-.card-quantity{
+.card-quantity {
     border: 1px solid white;
     border-radius: 3px;
     width: 2.4rem;
     text-align: center;
-    font-size: 1rem; 
+    font-size: 1rem;
     background-color: black;
 }
 
@@ -322,9 +340,11 @@ body {
     left: 0%;
     bottom: 0px;
 }
-#kon{
+
+#kon {
     display: none;
 }
+
 .navbar .menu-opsion a:before {
     content: "";
     position: absolute;
@@ -390,12 +410,12 @@ body {
     html {
         font-size: 75%;
     }
-    
+
 
 }
 
 /* Tab */
-@media (max-width: 868px) {     
+@media (max-width: 868px) {
     html {
         font-size: 62.5%;
     }
@@ -403,7 +423,8 @@ body {
     #menu-button {
         display: inline-block;
     }
-    #kon{
+
+    #kon {
         display: inline-block;
     }
 
@@ -442,11 +463,11 @@ body {
         flex-wrap: wrap;
     }
 
-    .video{
-        flex-wrap: wrap; 
+    .video {
+        flex-wrap: wrap;
     }
 
-    .card-container .card-item img{
+    .card-container .card-item img {
         width: 100px;
     }
 
@@ -471,15 +492,17 @@ body {
     .video {
         display: flex;
         align-items: center;
-    }   
+    }
 
-    
+
     .contact {
-        padding: 80px 30px; /* Adjust padding */
+        padding: 80px 30px;
+        /* Adjust padding */
     }
 
     .contact .heading {
-        font-size: 2.2rem; /* Smaller font for heading */
+        font-size: 2.2rem;
+        /* Smaller font for heading */
     }
 
     .contact .row {
@@ -489,7 +512,8 @@ body {
 
     .contact .row .map {
         height: 300px;
-        width: 100%; /* Adjust map height for smaller screens */
+        width: 100%;
+        /* Adjust map height for smaller screens */
     }
 
     .contact .row .contact-form {
@@ -497,7 +521,8 @@ body {
     }
 
     .contact .row form h3 {
-        font-size: 1.6rem; /* Smaller font for form heading */
+        font-size: 1.6rem;
+        /* Smaller font for form heading */
     }
 
     .contact .row form .inputBox input,
@@ -511,7 +536,7 @@ body {
     }
 }
 
-   
+
 
 
 /* Hp */
@@ -519,37 +544,42 @@ body {
     html {
         font-size: 60%;
     }
-    .card-container{
+
+    .card-container {
         gap: 20px !important;
     }
-    .card .card-container .card-item{
+
+    .card .card-container .card-item {
         width: 200px;
     }
-    
-    .logo-button ul li a i{
-        
+
+    .logo-button ul li a i {
+
         font-size: 2rem;
     }
 
-    .navbar .logo-button a{
-        margin-inline:2px ;
+    .navbar .logo-button a {
+        margin-inline: 2px;
     }
-    
+
     .contact .heading {
-        font-size: 1.8rem; /* Smaller heading font */
+        font-size: 1.8rem;
+        /* Smaller heading font */
     }
 
     .contact .row .map {
         height: 250px;
-       /* Further reduce map size */
+        /* Further reduce map size */
     }
 
     .contact .row .contact-form {
-        padding: 1.5rem; /* Smaller padding */
+        padding: 1.5rem;
+        /* Smaller padding */
     }
 
     .contact .row form h3 {
-        font-size: 1.4rem; /* Smaller form heading font */
+        font-size: 1.4rem;
+        /* Smaller form heading font */
     }
 
     .contact .row form .inputBox input,
@@ -561,9 +591,10 @@ body {
         font-size: 0.85rem;
         padding: 0.6rem 1rem;
     }
+
     .video-short {
         max-width: 100%;
-        padding: 0; 
+        padding: 0;
     }
 
 }
@@ -575,20 +606,17 @@ body {
 /* content */
 /* Beranda */
 .sec-bg {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
     background-image: url(SRC/background\ \(2\).jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
     position: relative;
-    padding: 15px 20px;
+    width: 100% !important;
 
 }
 
-.sec-bg:after { 
+.sec-bg:after {
     left: 0;
     content: "";
     display: block;
@@ -629,39 +657,31 @@ body {
     background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
     border-radius: 15px;
     text-shadow: 5px 5px 10px rgba(5, 5, 10, 0.5);
-    transition:  0.3s ease; 
+    transition: 0.3s ease;
     cursor: pointer;
     border: none;
     animation: animate-gradient 2.5s linear infinite;
 }
 
-.sec-bg .content .buton:hover{
-    transform: scale(1.10); 
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4); 
+.sec-bg .content .buton:hover {
+    transform: scale(1.10);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4);
 }
+
 /* Beranda end */
 
 /* About */
-.about {
-    padding-top: 150px ;
-    padding-left: 55px;
-    padding-right: 55px;
-    padding-bottom: 0;
-    color: aliceblue;
-    min-height: 100vh;
-    
-}
 
-.about .about-h2 {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
+.about-h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     font-family: 'Black Ops One', sans-serif;
     font-size: 30px;
     position: relative;
     list-style: none;
-    width: 100%; 
+    width: 100%;
     height: 100%;
     background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
     background-size: 200%;
@@ -672,28 +692,28 @@ body {
     margin: 0.5rem;
 }
 
-.about .about-div {
+.about-div {
     display: flex;
     margin-top: 25;
 }
 
-.about .about-div .about-img {
+.about-div .about-img {
     flex: 1 1 45rem;
 }
 
-.about .about-div .about-img img {
+.about-div .about-img img {
     width: 100%;
     height: 100%;
 
 }
 
-.about .about-div .about-content {
+.about-div .about-content {
     flex: 1 1 35rem;
     padding: 0 0.5rem;
 }
 
-.about .about-div .about-content h3 {
-    font-size: 5rem;
+.about-div .about-content h3 {
+    font-size: 4rem;
     margin-bottom: 1rem;
     margin-top: 5rem;
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
@@ -701,10 +721,10 @@ body {
     line-height: 1;
 }
 
-.about .about-div .about-content h3 span {
+.about-div .about-content h3 span {
     position: relative;
     list-style: none;
-    width: 100%; 
+    width: 100%;
     height: 100%;
     background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
     background-size: 200%;
@@ -715,7 +735,7 @@ body {
     margin: 0.5rem;
 }
 
-.about .about-div .about-content p {
+.about-div .about-content p {
     font-size: 1rem;
     margin-bottom: 25px;
     line-height: 1;
@@ -723,14 +743,18 @@ body {
 }
 
 .video {
-    display: flex; /* Mengatur elemen dalam satu baris */
-    align-items: center; /* Menjaga teks dan video sejajar secara vertikal */
-    justify-content: space-between; /* Memberikan jarak antara teks dan video */
-    gap: 20px; /* Jarak horizontal antara teks dan video */
+    display: flex;
+    /* Mengatur elemen dalam satu baris */
+    align-items: center;
+    /* Menjaga teks dan video sejajar secara vertikal */
+    justify-content: space-between;
+    /* Memberikan jarak antara teks dan video */
+    gap: 20px;
+    /* Jarak horizontal antara teks dan video */
     padding: 0 55px;
 }
 
-.video-text{
+.video-text {
     flex: 1 1 35rem;
     padding: 0 0.5rem;
 }
@@ -747,7 +771,7 @@ body {
     font-size: 7rem;
     position: relative;
     list-style: none;
-    width: 100%; 
+    width: 100%;
     height: 100%;
     background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
     background-size: 200%;
@@ -768,39 +792,139 @@ body {
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 
-.video-short { 
-    height: auto; 
+.video-short {
+    height: auto;
     width: 100%;
-    border: 10px solid transparent; /* Menetapkan border transparan */
-    border-image: linear-gradient(45deg,#fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff) 1; /* Border gradien */
-    border-radius: 10px; 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+    border: 10px solid transparent;
+    /* Menetapkan border transparan */
+    border-image: linear-gradient(45deg, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff) 1;
+    /* Border gradien */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* About end */
 
 /* Card */
-.card {
-    padding-top: 150px;
-    padding-left: 55px;
-    padding-right: 55px;
-    padding-bottom: 0; /* Pastikan padding-bottom diatur ke 0 */
-    color: aliceblue;
-    min-height: 100%;
+.cart-link {
+    text-decoration: none; 
+    color: inherit;        
+    display: block;        
+}
+
+.cart-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 5rem;
+}
+
+.cart-content {
+    position: relative;
+    width: 220px;
+    height: 300px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.container-img {
+    width: 100%;
+    height: 100px; /* Tinggi kontainer */
+    display: flex;
+    overflow: hidden; /* Sembunyikan gambar di luar kontainer */
+    position: relative;
+    flex-shrink: 0;
+}
+
+.cart-img {
+    flex-shrink: 0; /* Hindari penyusutan gambar */
+    width: auto;
+    height: 100%; /* Sesuaikan tinggi gambar */
+    animation: move-left 5s linear infinite; /* Animasi bergerak ke kiri */
+}
+
+@keyframes move-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.container-title{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.container-titles{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 0,5rem;
+}
+
+.text-title{
+    color: black;
+    font-size: 2rem;
+}
+
+.text-p{
+    color: black;
 }
 
 
 
-.card .card-shoes {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+}
+
+.hover-overlay p,
+.hover-overlay h3 {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.hover-overlay h3 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.cart-content:hover .hover-overlay {
+    opacity: 1;
+}
+
+
+
+.card-shoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     font-family: 'Black Ops One', sans-serif;
     font-size: 30px;
     position: relative;
     list-style: none;
-    width: 100%; 
+    width: 100%;
     height: 100%;
     background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
     background-size: 200%;
@@ -812,7 +936,8 @@ body {
 }
 
 
-.card .name-card {
+.name-card {
+    padding-top: 155px;
     text-align: left;
     position: relative;
     font-size: 30px;
@@ -824,48 +949,75 @@ body {
     -webkit-text-fill-color: transparent;
     animation: animate-gradient 2.5s linear infinite;
     margin: 0.5rem;
-    margin-top: 5rem;
     font-family: Black Ops One;
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 
-.card .card-container .card-item {
+.card-container .card-item {
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
     margin-bottom: 10px;
-    overflow-x: visible !important;
+}
 
+.card-containers .card-item {
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    margin-bottom: 10px;
+}
+
+.product-title{
+    font-size: 1rem;
+    font-weight: 900;
+    text-shadow: 2px 2px 5px black;
 
 }
 
-.card-container .card-item img{
-    width: 200px;  
+.product-desc {
+  white-space: nowrap;         /* Mencegah teks melanjutkan ke baris baru */
+  overflow: hidden;            /* Menyembunyikan teks yang melebihi batas */
+  text-overflow: ellipsis;     /* Menambahkan '...' di akhir teks yang dipotong */
+  max-width: 200px;            /* Sesuaikan lebar sesuai dengan kebutuhan Anda */
+}
+
+.card-container .card-item img {
+    width: 200px;
+}
+
+.card-containers .card-item img {
+    width: 200px;
 }
 
 .card-container {
-    display: flex; 
-    flex-wrap: nowrap; 
-    gap: 60px; 
-    overflow-x: scroll; 
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 60px;
+    overflow-x: scroll;
     padding-bottom: 10px;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    scrollbar-width: none; 
-    
+    scrollbar-width: none;
+}
+
+.card-containers {
+    display: flex;
+    gap: 60px;
+    padding-bottom: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
 }
 
 /* Style the card items */
 .card-item {
-    width: 500px; /* Set a fixed width for each card item */
+    width: 250px;
     height: auto;
     border: 1px solid white;
     border-radius: 10px;
     padding: 16px;
-    background-color: black;
-    border-radius: 10%;  
+    background-color: #121212;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 100%;
 }
 
 /* Optional: Style buttons */
@@ -878,12 +1030,7 @@ body {
     padding-inline: 1.6rem;
 
 }
-.product-desc{
-    font-size: 0.8rem;
-    text-align: justify;
-    color: #dfdbdb;
-    margin-top: 10px;
-}
+
 .button-group .buy-button {
     padding: 10px 20px;
     border: none;
@@ -891,15 +1038,15 @@ body {
     color: #fff;
     font-size: 16px;
     font-weight: bold;
-    position: relative;  
+    position: relative;
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 
-    
+
 }
 
 .cart-button {
     padding: 8px 12px;
-    cursor: pointer;   
+    cursor: pointer;
 }
 
 /* Tombol Tambahkan ke Keranjang */
@@ -923,23 +1070,22 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: animate-gradient 2.5 linear infinite;
-    transform: scale(1.50); /* Efek zoom */
+    transform: scale(1.50);
+    /* Efek zoom */
 }
 
 /* Ikon pada tombol Tambahkan ke Keranjang */
 .cart-button i {
     font-size: 1.4rem;
 }
+
 /* Card end*/
 
 
 /* Kontak */
 /* Contact Section */
-.contact {
-    padding: 150px 55px;
-    color: aliceblue;
-    min-height: 100vh;
-}
+
+.contact {}
 
 .contact .heading {
     text-align: center;
@@ -962,15 +1108,15 @@ body {
 
 .contact .row {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
     gap: 2rem;
 }
 
 /* Google Maps Styling */
 .contact .row .map {
-    flex: 1 1 50%; /* Same width as the form */
-    height: 450px; /* Fixed height for both map and form */
+    flex: 1 1 50%;
+    /* Same width as the form */
+    height: 450px;
+    /* Fixed height for both map and form */
     border-radius: 8px;
     border: 2px solid #8f68ff;
     width: 100%;
@@ -978,7 +1124,8 @@ body {
 
 /* Form Styling */
 .contact .row .contact-form {
-    flex: 1 1 50%; /* Same width as the map */
+    flex: 1 1 50%;
+    /* Same width as the map */
     padding: 2rem;
     border: 2px solid #8f68ff;
     border-radius: 8px;
@@ -986,7 +1133,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%; /* Pastikan elemen memiliki dimensi */
+    width: 100%;
+    /* Pastikan elemen memiliki dimensi */
     height: auto;
     color: #fff;
     max-width: 600px;
@@ -1006,17 +1154,21 @@ body {
     align-items: center;
     margin-bottom: 1.5rem;
     padding: 0.6rem 1rem;
-    background-color: rgba(0, 0, 0, 0.5); 
-    backdrop-filter: blur(2px); /* Efek blur yang ringan */
-    -webkit-backdrop-filter: blur(2px); /* Dukungan untuk Safari */
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    /* Efek blur yang ringan */
+    -webkit-backdrop-filter: blur(2px);
+    /* Dukungan untuk Safari */
     border-radius: 6px;
     outline: none;
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: white; /* Warna placeholder */
-    font-style: italic; /* Opsional: mengubah gaya font */
+    color: white;
+    /* Warna placeholder */
+    font-style: italic;
+    /* Opsional: mengubah gaya font */
     outline: none;
 }
 
@@ -1025,7 +1177,7 @@ body {
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;    
+    -webkit-text-fill-color: transparent;
     font-size: 1.2rem;
     margin-right: 1rem;
 }
@@ -1057,7 +1209,8 @@ body {
     font-size: 1rem;
     text-transform: uppercase;
     color: #fff;
-    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff); /* Background gradien statis */
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    /* Background gradien statis */
     border-radius: 15px;
     text-shadow: 5px 5px 10px rgba(5, 5, 10, 0.5);
     border: none;
@@ -1069,16 +1222,16 @@ body {
 .contact .row form .btn:hover {
     background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
     transform: scale(1.10);
-     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4); 
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4);
 }
 
-  /* Kontak End */
-.img-content{
+/* Kontak End */
+.img-content {
     overflow: hidden;
     display: flex;
 }
 
-.img-content .img-gerak{
+.img-content .img-gerak {
     display: flex;
     flex-shrink: 0;
     gap: 1rem;
@@ -1086,17 +1239,22 @@ body {
 
 }
 
-.img-content .img-gerak img{
+.img-content .img-gerak img {
     width: 100%;
 }
 
 @keyframes marquee {
-	0%   { transform: translateX(0%); }
-	100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
-  
+
 /* footer */
-.icon-footer{
+.icon-footer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1104,7 +1262,8 @@ body {
 }
 
 .icon-footer a {
-    font-size: 2.5rem; /* Ukuran ikon */
+    font-size: 2.5rem;
+    /* Ukuran ikon */
     background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
     background-size: 200%;
     background-clip: text;
@@ -1119,8 +1278,31 @@ body {
     transform: scale(1.10);
 }
 
-.copyright{
+.copyright {
     color: white;
     margin-bottom: 2rem;
 }
+
 /* footer end */
+
+
+*::-webkit-scrollbar {
+    width: 4px;
+    height: 2px;
+}
+
+*::-webkit-scrollbar-thumb {
+
+    border-radius: 100%;
+    background-color: #FF76CE;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #FF76Ce transparent;
+
+}
