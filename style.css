@@ -11,12 +11,19 @@
     font-family: sans-serif, 'Times New Roman', Times, serif;
     scroll-behavior: smooth;
     color: white;
+    cursor: url('cursor2.png'),auto !important;
     /* transition: all 0.9s ease-in-out; */
 
 }
 
+:hover{
+    cursor: url("cursor2.png"),auto !important;
+}
+#icon-keranjang{
+   
+    font-size: 1.2rem;
 
-
+}
 :before,
 :after {
     padding: 0%;
@@ -29,7 +36,13 @@ body {
     padding: 0;
     margin: 0;
     color: black;
+    cursor: url('cursor2.png'),auto ;
 }
+
+a{
+    cursor: url('cursor2.png'),auto !important ;
+  }
+
 
 .container {
     width: 80%;
@@ -50,7 +63,6 @@ body {
 /* HEADER */
 .menu-btn {
     color: white;
-    cursor: pointer;
     font-size: 23px;
     display: none;
 
@@ -115,7 +127,6 @@ body {
 }
 
 .navbar .logo-button a {
-    cursor: pointer;
     list-style: none;
     background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
     background-size: 200%;
@@ -189,7 +200,7 @@ body {
 /* Tombol close */
 #close-keranjang {
     font-size: 2rem;
-    cursor: pointer;
+
     background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
     background-size: 200%;
     background-clip: text;
@@ -254,14 +265,15 @@ body {
     border-radius: 15px;
     text-shadow: 5px 5px 10px rgba(5, 5, 10, 0.5);
     border: none;
-    cursor: pointer;
     transition: 0.3s ease;
     animation: animate-gradient 2.5s linear infinite;
+    cursor: url("cursor2.png"),auto !important;
 }
 
 .btn-buy:hover {
     background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
     transform: scale(1.10);
+    cursor: url("cursor2.png"),auto !important;
 }
 
 /* Styling untuk item dalam keranjang */
@@ -307,8 +319,8 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: animate-gradient 2.5s linear infinite;
-    cursor: pointer;
 }
+
 
 .keranjang-img {
     width: 100px;
@@ -658,7 +670,6 @@ body {
     border-radius: 15px;
     text-shadow: 5px 5px 10px rgba(5, 5, 10, 0.5);
     transition: 0.3s ease;
-    cursor: pointer;
     border: none;
     animation: animate-gradient 2.5s linear infinite;
 }
@@ -809,7 +820,8 @@ body {
 .cart-link {
     text-decoration: none; 
     color: inherit;        
-    display: block;        
+    display: block;  
+    cursor: url('cursor2.png'),auto !important;      
 }
 
 .cart-container {
@@ -827,7 +839,6 @@ body {
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #fff;
-    cursor: pointer;
 }
 
 .container-img {
@@ -896,6 +907,7 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     text-align: center;
+    cursor: url('cursor2.png'),auto ;
 }
 
 .hover-overlay p,
@@ -911,6 +923,7 @@ body {
 
 .cart-content:hover .hover-overlay {
     opacity: 1;
+    cursor: url('cursor2.png'),auto ;
 }
 
 
@@ -1034,7 +1047,6 @@ body {
 .button-group .buy-button {
     padding: 10px 20px;
     border: none;
-    cursor: pointer;
     color: #fff;
     font-size: 16px;
     font-weight: bold;
@@ -1046,7 +1058,7 @@ body {
 
 .cart-button {
     padding: 8px 12px;
-    cursor: pointer;
+
 }
 
 /* Tombol Tambahkan ke Keranjang */
@@ -1214,7 +1226,6 @@ body {
     border-radius: 15px;
     text-shadow: 5px 5px 10px rgba(5, 5, 10, 0.5);
     border: none;
-    cursor: pointer;
     transition: 0.3s ease;
 }
 
@@ -1270,7 +1281,6 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: animate-gradient 2.5s linear infinite;
-    cursor: pointer;
     transition: 0.3s ease;
 }
 
