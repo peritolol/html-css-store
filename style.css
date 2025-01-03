@@ -1574,6 +1574,27 @@ a{
 }
 
 @keyframes moves{
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.img-moves{
+    display: flex;
+    flex-shrink: 0;
+    gap: 1rem;
+    animation: movess 20s linear infinite;
+}
+
+.move .img-moves img{
+    width: 100px;
+}
+
+@keyframes movess{
     100% {
         transform: translateX(0%);
     }
