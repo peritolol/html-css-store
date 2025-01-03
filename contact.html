@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SRB_GarasiSneakers</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+  </head>
+  <body id="test" style="overflow-x: hidden">
+    <nav class="navbar" id="">
+      <div class="logo">
+        <img src="SRC/logo.png" alt="logo" />
+        <!-- <h1 style="font: bolder; font-size: 2rem; margin-left: 60px;">SRB> <br> <span style="font-family: Agbalumo;">GarasiSneakers</span></h1> -->
+      </div>
+
+      <ul class="menu-opsion">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="shoes.html">PRODUCT</a></li>
+        <li><a href="index.html#kontak">CONTACT</a></li>
+      </ul>
+
+      <div class="logo-button">
+        <a href=""> <i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="" id="icon-keranjang"><i class="fas fa-shopping-cart" ></i></a>
+        <a href="" id="kon"
+          ><i class="fa-solid fa-list" id="menu-button"></i
+        ></a>
+      </div>
+
+      <!-- keranjang -->
+      <section class="keranjang">
+        <!-- Kontainer Keranjang -->
+        <div class="keranjang-header">
+          <h2 class="keranjang-title">Keranjang Anda</h2>
+          <i class="fa-solid fa-x" id="close-keranjang"></i>
+        </div>
+
+        <!-- Kontainer untuk item keranjang -->
+        <div class="keranjang-kontent">
+          <!-- Contoh item dalam keranjang -->
+        </div>
+
+        <!-- Bagian total dan tombol pembelian -->
+        <div class="keranjang-footer">
+          <div class="total">
+            <span class="total-title">Total:</span>
+            <span class="total-price">Rp0</span>
+          </div>
+          <button type="button" class="btn-buy">Buy Now</button>
+        </div>
+      </section>
+
+      <!-- keranjang end -->
+    </nav>
+
+    <section class="contact container" id="kontak">
+        <h1 class="heading"><span>Contact Us</span></h1>
+        <div class="row">
+          <!-- Google Maps Embed -->
+          <iframe
+            class="map"
+            src="https://www.google.com/maps/embed?pb=!4v1734878761386!6m8!1m7!1sfsce5b83vEqd0l_gTMsdBw!2m2!1d-0.01937061125630885!2d109.3172658343386!3f312.4577639735152!4f-9.248738804567694!5f0.7820865974627469"
+            height="450"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+  
+          <!-- Contact Form -->
+          <form action="" class="contact-form" id="contact-form">
+            <div class="inputBox">
+              <span class="fas fa-user"></span>
+              <input type="text" id="name" placeholder="Your Name" required />
+            </div>
+            <div class="inputBox">
+              <span class="fa-solid fa-envelope"></span>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="inputBox">
+              <span class="fas fa-comment"></span>
+              <textarea
+                id="message"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+            <input type="submit" value="Send Message" class="btn" />
+          </form>
+        </div>
+      </section>
+
+
+
+    <footer >
+        <section>
+          <div class="img-content">
+            <div id="gerak" class="img-gerak">
+              <img src="SRC/logo.png" alt="SRB_GarasiSneakers" />
+    
+              <img src="SRC/logo.png" alt="SRB_GarasiSneakers" />
+    
+              <img src="SRC/logo.png" alt="SRB_GarasiSneakers" />
+    
+              <img src="SRC/logo.png" alt="SRB_GarasiSneakers" />
+    
+              <img src="SRC/logo.png" alt="SRB_GarasiSneakers" />
+    
+              <img src="SRC/logo.png" alt="SRB_GarasiSneakers" />
+    
+              <img src="SRC/logo.png" alt="SRB_GarasiSneakers" />
+    
+              <img src="SRC/logo.png" alt="SRB_GarasiSneakers" />
+            </div>
+  
+            <div aria-hidden id="gerak" class="img-gerak">
+              <img src="SRC/logo.png" alt="SRB_GarasiSneakers" />
+    
+              <img src="SRC/logo.png" alt="SRB_GarasiSneakers" />
+    
+              <img src="SRC/logo.png" alt="SRB_GarasiSneakers" />
+    
+              <img src="SRC/logo.png" alt="SRB_GarasiSneakers" />
+    
+              <img src="SRC/logo.png" alt="SRB_GarasiSneakers" />
+    
+              <img src="SRC/logo.png" alt="SRB_GarasiSneakers" />
+    
+              <img src="SRC/logo.png" alt="SRB_GarasiSneakers" />
+    
+              <img src="SRC/logo.png" alt="SRB_GarasiSneakers" />
+            </div>
+          </div>
+        </section>
+  
+        <section class="sec-logo container-footer">
+            <img src="SRC/logo.png" alt="">
+            <h1>SRB Garasi <span>Sneakers</span></h1>
+        </section>
+        
+        <section class= "container-footer sec-footer">
+          <div class="footer-about">
+            <h1 class="footer-h1">About US</h1>
+            <br>
+            <p>Selamat datang di SRB Garasi Sneakers, rumah bagi para pecinta sepatu branded second yang mengutamakan kualitas dan gaya!
+  
+              </p>
+          </div>
+    
+          <div class="footer-suport">
+            <h1 class="footer-h1">Menu</h1>
+            <br>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="shoes.html">Shoes</a>
+            <a href="#">kontak</a>
+          </div>
+    
+          <div class="footer-shop">
+            <h1 class="footer-h1">Shop</h1>
+            <br>
+            <a href="shoes.html#nike">Nike</a>
+            <a href="shoes.html#adidas">Adias</a>
+            <a href="shoes.html#louisvuiton">New Balance</a>
+            <a href="shoes.html#newbalance">Louis Vuiton</a>
+          </div>
+    
+          <div class="contact-us">
+            <h1 class="footer-h1">Contact US</h1>
+            <br>
+           <p><i class="fa-solid fa-phone"></i> +6281216091037</p>
+           <p><i class="fa-solid fa-envelope"></i>srbgarasisneakers@gmail.com</p>
+          </div>
+        </section>
+        
+        <section>
+          <div class="icon-footer">
+            <a
+              href="https://www.instagram.com/srb_garasisneakers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://wa.me/6281216091037/"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+          </div>
+          <br />
+          <br />
+          <p class="copyright" style="text-align: center">
+            &copy; SRB_GarasiSneakers 2024 &mdash; <span id="years"></span>
+          </p>
+        </section>
+        
+    </footer>
+      <!-- little js -->
+    <script src="script.js"></script>
+      <!-- little js end -->
+    </body>
+</html>
