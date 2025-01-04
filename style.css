@@ -75,7 +75,7 @@ a{
     width: 100%;
     min-height: 100vh;
     margin-inline: auto;
-    padding-top: 155px;
+    padding-top: 10px;
     
 }
 
@@ -809,14 +809,7 @@ a{
 
 .video {
     display: flex;
-    /* Mengatur elemen dalam satu baris */
-    align-items: center;
-    /* Menjaga teks dan video sejajar secara vertikal */
-    justify-content: space-between;
-    /* Memberikan jarak antara teks dan video */
-    gap: 20px;
-    /* Jarak horizontal antara teks dan video */
-    padding: 0 55px;
+
 }
 
 .video-text {
@@ -934,10 +927,14 @@ a{
 .text-title{
     color: black;
     font-size: 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 
+                -2px -2px 5px rgba(255, 255, 255, 0.7);
 }
 
 .text-p{
     color: black;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 
+                -2px -2px 5px rgba(255, 255, 255, 0.7);
 }
 
 
@@ -964,6 +961,8 @@ a{
 .hover-overlay h3 {
     margin: 5px 0;
     font-size: 16px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 
+                -2px -2px 5px rgba(255, 255, 255, 0.7);
 }
 
 .hover-overlay h3 {
@@ -1471,6 +1470,8 @@ a{
     width: 300px;
     display: grid;
     color: #121212;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 
+                -2px -2px 5px rgba(255, 255, 255, 0.7);
 }
 
 .footer-suport{
@@ -1602,4 +1603,102 @@ a{
     0% {
         transform: translateX(-50%);
     }
+}
+
+.sec-about{
+    padding-top:20px ;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(SRC/about.002.jpg);
+    width: 100%;
+    height: 80vh;
+}
+
+.text00-about{
+    font-size: 30px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.352);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 6px;
+    outline: none;
+    margin: 300px;
+    border: 1px solid black;
+}
+
+.text00-about p{
+    color: #121212;
+    font-weight: 400;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.text00-about h1{
+    font-weight: 900;
+    color: #121212;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 
+                -2px -2px 5px rgba(255, 255, 255, 0.7);
+}
+
+.about-owner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right:200px;
+    padding-left:200px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 1rem;
+    background-image: url(SRC/about.002.jpg) ;
+}
+
+.container-owner {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 55px;    
+}
+
+.instagram-media{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.owner-text{
+    text-align: center;
+    
+}
+
+.about-blur{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.352);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 6px;
+    outline: none;
+    margin: 200;
+    padding: 20px;
+    border: 1px solid black;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.owner-text h1{
+    font-size: 30px;
+    font-weight: 900;
+    color: #121212;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 
+                -2px -2px 5px rgba(255, 255, 255, 0.7);
+}
+
+.owner-text p{
+    font-size: 20px;
+    display: wrap;
+    color: #121212;
+    font-weight: 400;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
