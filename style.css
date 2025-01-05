@@ -51,6 +51,12 @@ a{
     padding-top: 155px;
 }
 
+.container-about {
+    width: 80%;
+    min-height: 100vh;
+    margin-inline: auto;
+}
+
 .container-footer {
     width: 80%;
     margin-inline: auto;
@@ -69,6 +75,8 @@ a{
     width: 100%;
     height: auto;
     padding-top: 20px;
+    width: 80%;
+    margin-inline: auto;
 }
 
 .container-video {
@@ -1606,6 +1614,7 @@ a{
 }
 
 .sec-about{
+    position: relative;
     padding-top:20px ;
     padding-bottom: 15px;
     display: flex;
@@ -1614,34 +1623,47 @@ a{
     background-image: url(SRC/about.002.jpg);
     width: 100%;
     height: 80vh;
+    z-index: -1;
+}
+
+.sec-about::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna gelap dengan transparansi */
+    z-index: 1;
 }
 
 .text00-about{
     font-size: 30px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.352);
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(2px);
-    border-radius: 6px;
     outline: none;
     margin: 300px;
-    border: 1px solid black;
+    z-index: 2;
 }
 
+
+
 .text00-about p{
-    color: #121212;
+    color: #fff;
     font-weight: 400;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    
 }
 
 .text00-about h1{
     font-weight: 900;
-    color: #121212;
+    color: #fff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 
                 -2px -2px 5px rgba(255, 255, 255, 0.7);
+        
 }
 
 .about-owner{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1651,6 +1673,18 @@ a{
     padding-bottom: 50px;
     gap: 1rem;
     background-image: url(SRC/about.002.jpg) ;
+    z-index: -1;
+}
+
+.about-owner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna gelap dengan transparansi */
+    z-index: 1;
 }
 
 .container-owner {
@@ -1667,38 +1701,78 @@ a{
     justify-content: center;
 }
 
-.owner-text{
-    text-align: center;
-    
+.owner-text{  
 }
 
 .about-blur{
     display: flex;
-    background-color: rgba(255, 255, 255, 0.352);
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(2px);
     border-radius: 6px;
     outline: none;
     margin: 200;
     padding: 20px;
-    border: 1px solid black;
     gap: 3rem;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
 .owner-text h1{
     font-size: 30px;
     font-weight: 900;
-    color: #121212;
+    color: #fff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 
                 -2px -2px 5px rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .owner-text p{
     font-size: 20px;
     display: wrap;
-    color: #121212;
+    color: #fff;
     font-weight: 400;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
+
+.container-pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.pages-img {
+    width: 80%; 
+    height: 400px; 
+    overflow: hidden; 
+    position: relative;
+    border-radius: 10px; 
+}
+
+.pages-slide {
+    display: flex;
+    animation: slide-animation 9s infinite; /* Animasi gambar bergerak */
+}
+
+.pages-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Menjaga gambar tetap proporsional */
+    border-radius: 10px; /* Sudut melengkung pada gambar */
+}
+
+@keyframes slide-animation {
+    0% {
+      transform: translateX(0); /* Mulai dari posisi awal */
+    }
+    33% {
+      transform: translateX(-100%); /* Pindahkan gambar pertama keluar */
+    }
+    66% {
+      transform: translateX(-200%); /* Pindahkan gambar kedua keluar */
+    }
+    100% {
+      transform: translateX(0); /* Kembali ke posisi awal untuk memulai siklus */
+    }
+}
+
