@@ -272,6 +272,6 @@ searchIcon.addEventListener('click', function (event) {
 // Menutup popup ketika area di luar konten popup diklik
 window.addEventListener('click', function (event) {
   if (event.target === popup) {
-    popup.style.right = '-400px'; // Mengembalikan popup ke luar layar
+    popup.style.right = '-100%'; // Mengembalikan popup ke luar layar
   }
 });
