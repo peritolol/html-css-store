@@ -234,3 +234,44 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
 });
 
 // kontak end
+
+// tombol on off suara
+document.addEventListener("DOMContentLoaded", function () {
+    const soundControl = document.getElementById("sound-control");
+    const soundIcon = document.getElementById("sound-icon");
+    const audioPlayer = document.getElementById("audio-player");
+
+    let isPlaying = false;  
+    soundControl.addEventListener("click", function (event) {
+      event.preventDefault(); // Mencegah refresh halaman
+    if (isPlaying) {
+        audioPlayer.pause();
+        soundIcon.classList.remove("fa-volume-up");
+        soundIcon.classList.add("fa-volume-mute");
+    } else {
+        audioPlayer.play();
+        soundIcon.classList.remove("fa-volume-mute");
+        soundIcon.classList.add("fa-volume-up");
+    }
+    isPlaying = !isPlaying;
+    });
+});
+// end
+
+// popup
+// Mengambil elemen yang diperlukan
+const searchIcon = document.getElementById('search-icon');
+const popup = document.getElementById('popup');
+
+// Menampilkan popup saat ikon pencarian diklik
+searchIcon.addEventListener('click', function (event) {
+  event.preventDefault(); // Menghindari link default
+  popup.style.right = '0'; // Menggerakkan popup dari luar ke dalam
+});
+
+// Menutup popup ketika area di luar konten popup diklik
+window.addEventListener('click', function (event) {
+  if (event.target === popup) {
+    popup.style.right = '-400px'; // Mengembalikan popup ke luar layar
+  }
+});

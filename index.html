@@ -37,14 +37,27 @@
         <li><a href="shoes.html">PRODUCT</a></li>
         <li><a href="contact.html">CONTACT</a></li>
       </ul>
-
+      
       <div class="logo-button">
-        <a href=""> <i class="fa-solid fa-magnifying-glass"></i></a>
-        <a href="" id="icon-keranjang"><i class="fas fa-shopping-cart" ></i></a>
-        <a href="" id="kon"
-          ><i class="fa-solid fa-list" id="menu-button"></i
-        ></a>
+        <a href="#" id="search-icon"> <i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#" id="icon-keranjang"><i class="fas fa-shopping-cart" ></i></a>
+        <a href="#" id="kon"><i class="fa-solid fa-list" id="menu-button"></i></a>
+        <a href="#" id="sound-control"><i class="fa fa-volume-up" id="sound-icon"></i></a>
+        <audio id="audio-player" src="SRC/twopack.mp3" loop></audio>
       </div>
+
+      <!-- Popup Pencarian -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <input type="text" class="popup-input" placeholder="Masukkan teks di sini...">
+      <div class="popup-links">
+        <a href="#link1">Link 1</a>
+        <a href="#link2">Link 2</a>
+        <a href="#link3">Link 3</a>
+      </div>
+    </div>
+  </div>
+      
 
       <!-- keranjang -->
       <section class="keranjang">
@@ -136,7 +149,7 @@
         </div>
       </div>
     </section>
-
+      <!-- pages -->
     <section class="container-pages">
       <div class="pages-img">
         <div class="pages-slide">
@@ -146,6 +159,7 @@
         </div>
       </div>
     </section>
+    <!-- pages end -->
 
     <!-- about -->
     <section id="about" class="container-about">
