@@ -37,14 +37,33 @@
         <li><a href="shoes.html">PRODUCT</a></li>
         <li><a href="index.html#kontak">CONTACT</a></li>
       </ul>
-
+      
       <div class="logo-button">
-        <a href=""> <i class="fa-solid fa-magnifying-glass"></i></a>
-        <a href="" id="icon-keranjang"><i class="fas fa-shopping-cart" ></i></a>
-        <a href="" id="kon"
-          ><i class="fa-solid fa-list" id="menu-button"></i
-        ></a>
+        <a href="#" id="search-icon"> <i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#" id="icon-keranjang"><i class="fas fa-shopping-cart" ></i></a>
+        <a href="#" id="kon"><i class="fa-solid fa-list" id="menu-button"></i></a>
+        <a href="#" id="sound-control"><i class="fa fa-volume-up" id="sound-icon"></i></a>
+        <audio id="audio-player" src="SRC/twopack.mp3" loop></audio>
       </div>
+
+     <!-- Popup Pencarian -->
+     <div class="popup" id="popup">
+      <div class="popup-content">
+        <i class="fa-solid fa-x close-icon" id="close-popup"></i>
+        <div class="input-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" class="popup-input" placeholder="Search..." />
+        </div>
+        <div class="popup-links">
+          <a href="shoes.html#nike">Nike</a>
+          <a href="shoes.html#adidas">Adidas</a>
+          <a href="shoes.html#newbalance">New Balance</a>
+          <a href="shoes.html#louisvuiton">Louis Vuiton</a>
+        </div>
+      </div>
+    </div>
+      
+      
 
       <!-- keranjang -->
       <section class="keranjang">
@@ -217,7 +236,7 @@
         
     </footer>
       <!-- little js -->
-    <script src="script.js"></script>
+      <script src="script.js" defer></script>
       <!-- little js end -->
     </body>
 </html>

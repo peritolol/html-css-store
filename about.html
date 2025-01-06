@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SRB_GarasiSneakers</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -37,14 +38,35 @@
         <li><a href="shoes.html">PRODUCT</a></li>
         <li><a href="contact.html">CONTACT</a></li>
       </ul>
-
+      
       <div class="logo-button">
-        <a href=""> <i class="fa-solid fa-magnifying-glass"></i></a>
-        <a href="" id="icon-keranjang"><i class="fas fa-shopping-cart" ></i></a>
-        <a href="" id="kon"
-          ><i class="fa-solid fa-list" id="menu-button"></i
-        ></a>
+        <a href="#" id="search-icon"> <i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#" id="icon-keranjang"><i class="fas fa-shopping-cart" ></i></a>
+        <a href="#" id="kon"><i class="fa-solid fa-list" id="menu-button"></i></a>
+        <a href="#" id="sound-control"><i class="fa fa-volume-up" id="sound-icon"></i></a>
+        <audio id="audio-player" src="SRC/twopack.mp3" loop></audio>
       </div>
+
+     <!-- Popup Pencarian -->
+     <!-- Popup Pencarian -->
+     <div class="popup" id="popup">
+      <div class="popup-content">
+        <i class="fa-solid fa-x close-icon" id="close-popup"></i>
+        <div class="input-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" class="popup-input" placeholder="Search..." />
+        </div>
+        <div class="popup-links">
+          <a href="shoes.html#nike">Nike</a>
+          <a href="shoes.html#adidas">Adidas</a>
+          <a href="shoes.html#newbalance">New Balance</a>
+          <a href="shoes.html#louisvuiton">Louis Vuiton</a>
+        </div>
+      </div>
+    </div>
+      
+      
+      
 
       <!-- keranjang -->
       <section class="keranjang">

@@ -2,28 +2,23 @@
 const menuOpsion = document.querySelector('.menu-opsion');
 const menuButton = document.querySelector('#menu-button');
 
-    document.querySelector("*").style.overflowX  = "hidden"
-
+document.querySelector("*").style.overflowX = "hidden";
 
 if (menuButton && menuOpsion) {
     menuButton.onclick = (event) => {
         event.preventDefault();
-        console.log();
         menuOpsion.classList.toggle('active');
     };
 
     document.addEventListener('click', function (e) {
         if (!menuOpsion.contains(e.target) && !menuButton.contains(e.target)) {
             menuOpsion.classList.remove('active');
-       document.querySelector("*").style.overflowX  = "hidden"
+            document.querySelector("*").style.overflowX = "hidden";
         }
     });
 }
 
-
-
-
-// Mendapatkan elemen yang diperlukan
+// Fungsi untuk membuka keranjang
 let keranjangIcon = document.querySelector("#icon-keranjang");
 let Keranjang = document.querySelector(".keranjang");
 let closeKeranjang = document.querySelector("#close-keranjang");
@@ -177,63 +172,24 @@ function updatetotal() {
     });
 }
 
-// kontak
-// Inisialisasi EmailJS
-// Inisialisasi EmailJS
-try {
-    emailjs.init("c-S3UmbRoVXHDm-HU"); // Ganti dengan Public Key Anda
-    console.log("EmailJS diinisialisasi dengan sukses.");
-} catch (error) {
-    console.error("Gagal inisialisasi EmailJS:", error);
+// popup
+const searchIcon = document.getElementById('search-icon');
+const popup = document.getElementById('popup');
+const closeIcon = document.getElementById('close-popup');
+
+// Event untuk membuka popup
+if (searchIcon && popup) {
+  searchIcon.addEventListener('click', function () {
+    popup.style.right = '0'; // Tampilkan popup
+  });
 }
 
-// Menangani pengiriman form
-document.getElementById("contact-form").addEventListener("submit", function (event) {
-    event.preventDefault(); // Mencegah pengiriman form secara default
-
-    // Ambil data dari form
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-
-   
-    const data = {
-        service_id: "service_euden8u",
-        template_id: "template_j2j44xs", 
-        user_id: "c-S3UmbRoVXHDm-HU",
-        template_params: {
-            from_name: name,
-            from_email: email,
-            message: message
-        }
-    };
-
-   
-    fetch("https://api.emailjs.com/api/v1.0/email/send", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json" 
-        },
-        body: JSON.stringify(data) 
-    })
-        .then(response => {
-            if (response.ok) {
-                console.log("Email berhasil dikirim.");
-                alert("Pesan Anda telah dikirim!");
-            } else {
-                return response.json().then(err => {
-                    console.error("Terjadi kesalahan:", err);
-                    alert("Terjadi kesalahan, coba lagi nanti.");
-                });
-            }
-        })
-        .catch(error => {
-            console.error("Kesalahan jaringan:", error);
-            alert("Kesalahan jaringan, coba lagi nanti.");
-        });
-});
-
-// kontak end
+// Event untuk menutup popup
+if (closeIcon && popup) {
+  closeIcon.addEventListener('click', function () {
+    popup.style.right = '-100%'; // Sembunyikan popup
+  });
+}
 
 // tombol on off suara
 document.addEventListener("DOMContentLoaded", function () {
@@ -255,23 +211,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     isPlaying = !isPlaying;
     });
-});
-// end
-
-// popup
-// Mengambil elemen yang diperlukan
-const searchIcon = document.getElementById('search-icon');
-const popup = document.getElementById('popup');
-
-// Menampilkan popup saat ikon pencarian diklik
-searchIcon.addEventListener('click', function (event) {
-  event.preventDefault(); // Menghindari link default
-  popup.style.right = '0'; // Menggerakkan popup dari luar ke dalam
-});
-
-// Menutup popup ketika area di luar konten popup diklik
-window.addEventListener('click', function (event) {
-  if (event.target === popup) {
-    popup.style.right = '-100%'; // Mengembalikan popup ke luar layar
-  }
 });
