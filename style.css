@@ -738,6 +738,7 @@ a{
 .about-div {
     display: flex;
     margin-top: 25;
+    gap: 100px;
 }
 
 .about-div .about-img {
@@ -756,7 +757,7 @@ a{
 }
 
 .about-div .about-content h3 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
     color: #121212;
@@ -778,6 +779,7 @@ a{
     -webkit-text-fill-color: transparent;
     animation: animate-gradient 2.5s linear infinite;
     margin: 0.5rem;
+    text-shadow: none;
 }
 
 .view-all{
@@ -800,11 +802,12 @@ a{
 
 
 .about-div .about-content p {
-    font-size: 20px;
+    font-size: 25px;
     color: #121212;
     margin-bottom: 25px;
     line-height: 1;
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 
+    -2px -2px 5px rgba(255, 255, 255, 0.7);
 }
 
 .video {
