@@ -452,9 +452,9 @@ a{
 
 
 /* Laptop */
-@media (max-width: 1366px) {
+@media (max-width: 9999999999px) {
     html {
-        font-size: 75%;
+        font-size: 100%;
     }
 
 
@@ -478,11 +478,11 @@ a{
         position: absolute;
         top: 100%;
         right: -100%;
-        background-color: rgb(0, 0, 0);
+        background-color: #fff;
         width: 30rem;
         height: 100vh;
         transition: 0.3s;
-        box-shadow: 5px 5px 20px white;
+        box-shadow: 5px 5px 20px #121212;
     }
 
     .navbar .menu-opsion.active {
@@ -568,7 +568,6 @@ a{
 
     .contact .row form h3 {
         font-size: 1.6rem;
-        /* Smaller font for form heading */
     }
 
     .contact .row form .inputBox input,
@@ -600,8 +599,6 @@ a{
     }
 
     .logo-button ul li a i {
-
-
         font-size: 2rem;
     }
 
@@ -1440,12 +1437,15 @@ a{
 
 .sec-logo img{
     width: 10%;
-    border-radius: 50%;
+    border-radius: 10%;
 }
 
 .sec-logo h1{
     font-size: 40px;
     padding-bottom: 20px;
+    color: #121212;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 
+    -2px -2px 5px rgba(255, 255, 255, 0.7);
 }
 
 .sec-logo h1 span{
@@ -1455,6 +1455,7 @@ a{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: animate-gradient 2.5s linear infinite;
+    text-shadow: none;
 }
 
 .footer-about{
@@ -1737,7 +1738,7 @@ a{
 }
 
 .pages-img {
-    width: 80%; 
+    width: 90%; 
     height: 400px; 
     overflow: hidden; 
     position: relative;
