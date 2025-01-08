@@ -680,7 +680,7 @@ a{
 
 .sec-bg .content h1 {
     font-size: 6rem;
-    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    text-shadow:  -2px -2px 5px rgba(172, 172, 172, 0.539),2px 2px 5px rgba(0, 0, 0, 0.3);
     font-weight: bold;
     line-height: 1;
 }
@@ -688,7 +688,7 @@ a{
 .sec-bg .content p {
     font-size: 2.3rem;
     font-weight: 100;
-    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    text-shadow:  -2px -2px 5px rgba(172, 172, 172, 0.539),2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .sec-bg .content .buton {
@@ -1538,6 +1538,7 @@ a{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: animate-gradient 2.5s linear infinite;
+    text-shadow: none;
 }
 
 
