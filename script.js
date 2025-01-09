@@ -212,3 +212,28 @@ document.addEventListener("DOMContentLoaded", function () {
     isPlaying = !isPlaying;
     });
 });
+
+
+// File script.js
+const themeToggleBtn = document.getElementById("theme-toggle");
+const iconLight = document.getElementById("icon-light");
+const iconDark = document.getElementById("icon-dark");
+
+// Memeriksa preferensi tema pengguna sebelumnya
+const currentTheme = localStorage.getItem("theme") || "light";
+document.body.setAttribute("data-theme", currentTheme);
+if (currentTheme === "dark") {
+    iconLight.style.display = "none";
+    iconDark.style.display = "inline";
+}
+
+// Menangani klik tombol
+themeToggleBtn.addEventListener("click", () => {
+    const isDarkMode = document.body.getAttribute("data-theme") === "dark";
+    document.body.setAttribute("data-theme", isDarkMode ? "light" : "dark");
+    localStorage.setItem("theme", isDarkMode ? "light" : "dark");
+
+    // Ubah ikon
+    iconLight.style.display = isDarkMode ? "inline" : "none";
+    iconDark.style.display = isDarkMode ? "none" : "inline";
+});
