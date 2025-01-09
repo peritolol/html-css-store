@@ -179,7 +179,8 @@ const closeIcon = document.getElementById('close-popup');
 
 // Event untuk membuka popup
 if (searchIcon && popup) {
-  searchIcon.addEventListener('click', function () {
+  searchIcon.addEventListener('click', function (event) {
+    event.preventDefault();
     popup.style.right = '0'; // Tampilkan popup
   });
 }
@@ -197,19 +198,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const soundIcon = document.getElementById("sound-icon");
     const audioPlayer = document.getElementById("audio-player");
 
-    let isPlaying = false;  
+    let isPlaying = false; // Audio tidak diputar secara default
+
     soundControl.addEventListener("click", function (event) {
-      event.preventDefault(); // Mencegah refresh halaman
-    if (isPlaying) {
-        audioPlayer.pause();
-        soundIcon.classList.remove("fa-volume-up");
-        soundIcon.classList.add("fa-volume-mute");
-    } else {
-        audioPlayer.play();
-        soundIcon.classList.remove("fa-volume-mute");
-        soundIcon.classList.add("fa-volume-up");
-    }
-    isPlaying = !isPlaying;
+        event.preventDefault(); // Mencegah refresh halaman
+        if (isPlaying) {
+            audioPlayer.pause();
+            soundIcon.classList.remove("fa-volume-up");
+            soundIcon.classList.add("fa-volume-mute");
+        } else {
+            audioPlayer.play();
+            soundIcon.classList.remove("fa-volume-mute");
+            soundIcon.classList.add("fa-volume-up");
+        }
+        isPlaying = !isPlaying;
     });
 });
 
