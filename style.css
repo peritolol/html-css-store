@@ -1922,4 +1922,5 @@ a{
     cursor: pointer;
     color: var(--text-color);
     transition: color 0.3s;
+    margin: 10px;
 }
