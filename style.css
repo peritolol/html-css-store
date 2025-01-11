@@ -331,6 +331,7 @@ a{
     display: grid;
     grid-template-columns: 1fr 2fr 0.5fr;
     gap: 1rem;
+    color: var(--text-color);
     align-items: center;
     margin-top: 1rem;
     border: var(--border-color);
@@ -366,6 +367,7 @@ a{
     width: 2.4rem;
     text-align: center;
     font-size: 1rem;
+    background-color: var(--bg-color);
     color: var(--text-color);
 }
 
