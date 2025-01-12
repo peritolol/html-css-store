@@ -37,12 +37,13 @@
     border: none;
     font-family: sans-serif, 'Times New Roman', Times, serif;
     scroll-behavior: smooth;
-    cursor: url('cursor2.png'),auto !important;
+    cursor: url('cursor.cur'),auto !important;
+    cursor: url('cursor2.cur'),pointer;
     /* transition: all 0.9s ease-in-out; */
 }
 
 :hover{
-    cursor: url("cursor2.png"),auto !important;
+    cursor: url("cursor.cur"),auto !important;
 }
 #icon-keranjang{
    
@@ -61,11 +62,11 @@ body {
     padding: 0;
     margin: 0;
     color: var(--text-color);
-    cursor: url('cursor2.png'),auto ;
+    cursor: url('cursor.cur'),auto ;
 }
 
 a{
-    cursor: url('cursor2.png'),auto !important ;
+    cursor: url('cursor.cur'),auto !important ;
 }
 
 
@@ -317,13 +318,13 @@ a{
     border: none;
     transition: 0.3s ease;
     animation: animate-gradient 2.5s linear infinite;
-    cursor: url("cursor2.png"),auto !important;
+    cursor: url("cursor.cur"),auto !important;
 }
 
 .btn-buy:hover {
     background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff);
     transform: scale(1.10);
-    cursor: url("cursor2.png"),auto !important;
+    cursor: url("cursor.cur"),auto !important;
 }
 
 /* Styling untuk item dalam keranjang */
@@ -886,7 +887,7 @@ a{
     text-decoration: none; 
     color: inherit;        
     display: block;  
-    cursor: url('cursor2.png'),auto !important;      
+    cursor: url('cursor.cur'),auto !important;      
 }
 
 .cart-container {
@@ -976,7 +977,7 @@ a{
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     text-align: center;
-    cursor: url('cursor2.png'),auto ;
+    cursor: url('cursor.cur'),auto ;
 }
 
 .hover-overlay p,
@@ -994,7 +995,7 @@ a{
 
 .cart-content:hover .hover-overlay {
     opacity: 1;
-    cursor: url('cursor2.png'),auto ;
+    cursor: url('cursor.cur'),auto ;
 }
 
 
@@ -1220,6 +1221,7 @@ a{
     border-radius: 8px;
     border: 2px solid #8f68ff;
     width: 100%;
+    cursor: url('cursor.cur'),auto !important ;
 }
 
 /* Form Styling */
@@ -1239,6 +1241,7 @@ a{
     color: #fff;
     max-width: 600px;
     margin: auto;
+    cursor: url('cursor.cur'),auto !important ;
 }
 
 .contact .row form h3 {
@@ -1670,6 +1673,7 @@ a{
 }
 
 .about-owner{
+    font-size: 30px;
     position: relative;
     display: flex;
     align-items: center;
@@ -1694,6 +1698,8 @@ a{
     z-index: 0;
 }
 
+
+
 .container-owner {
     align-items: center;
     justify-content: center;
@@ -1703,7 +1709,7 @@ a{
 }
 
 .instagram-media{
-    cursor: url('cursor2.png'),auto !important;
+    cursor: url('cursor.cur'),auto !important;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -1723,6 +1729,8 @@ a{
     z-index: 2;
 }
 
+
+
 .owner-text h1{
     font-size: 30px;
     font-weight: 900;
@@ -1734,11 +1742,21 @@ a{
 }
 
 .owner-text p{
-    font-size: 20px;
+    font-size: 25px;
     display: wrap;
     color: #fff;
     font-weight: 400;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.owner-text p span{
+    font-weight: 900;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
 }
 
 .container-pages {
@@ -1907,7 +1925,7 @@ a{
     padding: 15px 15px; /* Sesuaikan ukuran tombol */
     border: none;
     background: transparent;
-    cursor: pointer;
+    cursor:url('cursor.cur') auto;
     display: inline-flex;
     align-items: center;
     justify-content: center;
