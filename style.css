@@ -311,7 +311,7 @@ a{
     text-transform: uppercase;
     color: #fff;
     font-weight: bold;
-    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff);
     border-radius: 15px;
     text-shadow: var(--text-shadow);
     border: none;
@@ -321,7 +321,7 @@ a{
 }
 
 .btn-buy:hover {
-    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff);
     transform: scale(1.10);
     cursor: url("cursor2.png"),auto !important;
 }
@@ -725,7 +725,7 @@ a{
     font-size: 1.4rem;
     font-weight: 900;
     color: #fff;
-    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff);
     border-radius: 15px;
     text-shadow: 5px 5px 10px rgba(5, 5, 10, 0.5);
     transition: 0.3s ease;
@@ -748,18 +748,15 @@ a{
     align-items: center;
     text-align: center;
     font-family: 'Black Ops One', sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     position: relative;
     list-style: none;
     width: 100%;
+    color: var(--text-color);
     height: 100%;
-    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
-    background-size: 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: animate-gradient 2.5s linear infinite;
     margin: 0.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 
+    -2px -2px 5px rgba(255, 255, 255, 0.7);
 }
 
 .about-div {
@@ -815,7 +812,7 @@ a{
 .view-all{
     font-size: 1.4rem;
     font-weight: 900;
-    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff);
     border-radius: 15px;
     text-shadow: 5px 5px 10px rgba(5, 5, 10, 0.5);
     transition: 0.3s ease;
@@ -840,8 +837,6 @@ a{
     color: var(--text-color);
     margin-bottom: 25px;
     line-height: 1;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 
-    -2px -2px 5px rgba(255, 255, 255, 0.7);
 }
 
 .video {
@@ -1010,17 +1005,14 @@ a{
     align-items: center;
     text-align: center;
     font-family: 'Black Ops One', sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     position: relative;
     list-style: none;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
-    background-size: 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: animate-gradient 2.5s linear infinite;
+    color: var(--text-color);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 
+    -2px -2px 5px rgba(255, 255, 255, 0.7);
 
 }
 
@@ -1029,15 +1021,12 @@ a{
     padding-top: 155px;
     text-align: left;
     position: relative;
-    font-size: 30px;
+    font-size: 40px;
     font-family: Black Ops One;
-    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
-    background-size: 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: animate-gradient 2.5s linear infinite;
+    color: var(--text-color);
     margin: 0.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 
+    -2px -2px 5px rgba(255, 255, 255, 0.7);
 }
 .name-cards {
     padding-top: 15px;
@@ -1197,7 +1186,10 @@ a{
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #fff;
+    color: var(--text-color);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 
+                -2px -2px 5px rgba(255, 255, 255, 0.7);
+    
 }
 
 .contact .heading span {
@@ -1210,6 +1202,8 @@ a{
     -webkit-text-fill-color: transparent;
     animation: animate-gradient 2.5 linear infinite;
     font-family: 'Black Ops One', sans-serif;
+    text-shadow: none;
+    margin: 0px 10px;
 }
 
 .contact .row {
@@ -1307,7 +1301,6 @@ a{
 }
 
 /* Button Styling */
-/* Tombol dengan background gradien statis */
 .contact .row form .btn {
     font-weight: 900;
     display: inline-block;
@@ -1315,8 +1308,7 @@ a{
     font-size: 1rem;
     text-transform: uppercase;
     color: #fff;
-    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
-    /* Background gradien statis */
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff);
     border-radius: 15px;
     text-shadow: 5px 5px 10px rgba(5, 5, 10, 0.5);
     border: none;
@@ -1325,7 +1317,7 @@ a{
 
 
 .contact .row form .btn:hover {
-    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff);
     transform: scale(1.10);
     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4);
 }
@@ -1402,14 +1394,11 @@ a{
 }
 
 .icon-footer a {
-    font-size: 2.5rem;
-    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
-    background-size: 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: animate-gradient 2.5s linear infinite;
+    font-size: 3rem;
+    color: var(--text-color);
     transition: 0.3s ease;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 
+                -2px -2px 5px rgba(255, 255, 255, 0.7);
 }
 
 
@@ -1492,7 +1481,6 @@ a{
 .footer-about p{
     color: var(--text-color);
     font-weight: 200;
-    text-shadow: 2px 2px 5px rgb(255, 255, 255);
 }
 
 .footer-h1{
@@ -1511,7 +1499,6 @@ a{
 .footer-suport a{
     color: var(--text-color);
     font-weight: 200;
-    text-shadow: 2px 2px 5px rgb(255, 255, 255);
     transition: all 0.3s ease;
 }
 
@@ -1530,7 +1517,6 @@ a{
 .footer-shop a{
     color:var(--text-color);
     font-weight: 200;
-    text-shadow: 2px 2px 5px rgb(255, 255, 255);
     transition: all 0.3s ease;
 }
 
@@ -1548,7 +1534,6 @@ a{
 .contact-us p{
     color: var(--text-color);
     font-weight: 200;
-    text-shadow: 2px 2px 5px rgb(255, 255, 255);
 }
 
 .contact-us p i {
