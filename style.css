@@ -1916,12 +1916,58 @@ a{
     right: 0;
 }
 
-.buton-theme{
-    background: none;
+.buton-theme {
+    position: relative;
+    overflow: hidden;
+    padding: 15px 15px; /* Sesuaikan ukuran tombol */
     border: none;
-    font-size: 1.5rem;
+    background: transparent;
     cursor: pointer;
-    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buton-theme::before,
+.buton-theme::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    transition: width 0.3s;
+}
+
+.buton-theme::before {
+    top: 0;
+    right: 0;
+}
+
+.buton-theme::after {
+    bottom: 0;
+    left: 0;
+}
+
+.buton-theme:hover::before,
+.buton-theme:hover::after {
+    width: 100%;
+}
+
+.buton-theme i {
+    font-size: 20px;
+    position: relative;
     transition: color 0.3s;
-    margin: 10px;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.buton-theme:hover i {
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
