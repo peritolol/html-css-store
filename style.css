@@ -837,12 +837,9 @@ a{
     position: relative;
     font-size: 30px;
     font-family: Black Ops One;
-    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
-    background-size: 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: animate-gradient 2.5s linear infinite;
+    color: var(--background-image);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 
+                -2px -2px 5px rgba(255, 255, 255, 0.7);
     margin: 0.5rem;
 }
 
